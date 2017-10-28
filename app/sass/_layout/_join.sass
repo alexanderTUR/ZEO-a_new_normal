@@ -1,0 +1,68 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.join-section
+  background-color: rgb(236, 236, 236)
+
+.join-container
+  max-width: 1400px
+  margin: 0 auto
+  padding: 80px 120px
+  text-align: center
+
+.join-title
+  margin-bottom: 40px
+  font-size: 36px
+  font-family: $bold-font
+  color: rgb(51, 51, 51)
+  text-transform: uppercase
+  line-height: 1.3
+
+.join-text
+  margin-bottom: 60px
+  font-size: 14px
+  font-family: $light-font
+  color: rgb(51, 51, 51)
+  line-height: 2
+
+.join-icon
+  display: inline-block
+  width: 29px
+  height: 28px
+  margin-right: 10px
+  svg
+    display: block
+    width: 100%
+    height: auto
+
+.join-slider-wrapper
+  position: relative
+  text-align: left
+  margin-bottom: 50px
+  .join-item
+    padding: 0 20px
+  .item-title
+    font-size: 18px
+    font-family: $bold-font
+    color: rgb(51, 51, 51)
+    line-height: 1.3
+  .item-subtitle
+    font-size: 13px
+    font-family: $light-font
+    color: rgb(51, 51, 51)
+    line-height: 1.3
+  .slider-left-arrow, .slider-right-arrow
+    padding: 10px
+    height: 48px
+    cursor: pointer
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 10
+    svg
+      width: 14px
+      height: 28px
+  .slider-left-arrow
+    left: -60px
+  .slider-right-arrow
+    right: -60px

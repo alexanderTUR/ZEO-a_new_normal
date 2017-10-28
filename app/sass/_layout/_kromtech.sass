@@ -1,0 +1,202 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.kromtech-section
+  background-color: rgb(221, 222, 224)
+
+.kromtech-container
+  max-width: 1400px
+  margin: 0 auto
+  padding-top: 70px
+  position: relative
+  .backtotop-button
+    background-color: rgb(200, 200, 200)
+    margin-right: 120px
+  .learn-more-wrapper
+    text-align: center
+    margin-bottom: 70px
+
+.kromtech-top-container
+  @include clearfix
+  margin-bottom: 35px
+  
+.kromtech-logo-container
+  float: left
+  margin-left: 120px
+
+.kromtech-content-wrapper
+  display: flex
+
+.kromtech-aside
+  width: 480px
+
+.kromtech-info
+  width: 920px
+
+.kromtech-why-container, .kromtech-how-container
+  margin-left: 120px
+
+.kromtech-why-head, .kromtech-how-head
+  font-size: 13px
+  color: $accent-color
+  text-transform: uppercase
+  line-height: 3.2
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: -10px
+    border-bottom: 1px solid $accent-color
+    width: 91px
+
+.kromtech-why-container
+  margin-bottom: 50px
+
+.kromtech-why-text, .kromtech-how-text
+  display: block
+  font-size: 21px
+  color: rgb(51, 51, 51)
+  line-height: 2
+  padding-right: 15px
+
+.kromtech-how-container
+  margin-bottom: 40px
+
+.kromtech-aside-img-container
+  padding-left: 60px
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.kromtech-info
+  position: relative
+  padding: 0 120px 0 60px
+
+.kromtech-bg-robo
+  position: absolute
+  width: 349px
+  top: -90px
+  left: -120px
+  img
+    width: 100%
+    height: auto
+    display: block
+
+.kromtech-research-title, .kromtech-approach-title, .kromtech-security-title, .kromtech-partners-title
+  font-size: 20px
+  font-family: $medium-font
+  color: rgb(51, 51, 51)
+  text-transform: uppercase
+  line-height: 1.4
+  margin: 0
+  font-weight: normal
+
+.kromtech-research-text, .approach-text, .kromtech-security-text, .kromtech-partners-text
+  font-family: $light-font
+  font-size: 14px
+  line-height: 2
+  color: rgb(51, 51, 51)
+
+.kromtech-security-text, .kromtech-partners-text
+  margin-bottom: 60px
+  margin-top: 20px
+
+.kromtech-research-container
+  padding-top: 10px
+
+.kromtech-research-title
+  margin-bottom: 20px
+
+.kromtech-research-text
+  margin-bottom: 60px
+
+.kromtech-approach-list
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 50px
+  .kromtech-approach-item
+    width: 50%
+
+.approach-icon-container
+  svg
+    width: 40px
+    height: 52px
+    margin-top: 5px
+
+.kromtech-approach-item
+  display: flex
+  margin-bottom: 40px
+
+.kromtech-approach-title
+  margin-bottom: 35px
+
+.approach-title
+  margin: 0
+  font-size: 16px
+  font-family: $medium-font
+  font-weight: normal
+
+.approach-text-container
+  padding: 0 25px 0 15px
+
+.approach-text
+  margin: 0
+
+.kromtech-security-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 50px
+
+.kromtech-security-item
+  text-align: center
+  width: 17%
+  margin-bottom: 40px
+  .security-item-icon
+    height: 60px
+    margin-bottom: 10px
+    img
+      display: block
+      margin: 0 auto
+
+.security-item-nam
+  font-size: 14px
+  color: rgb(51, 51, 51)
+  line-height: 2
+
+.kromtech-partners-list
+  display: flex
+  flex-wrap: wrap
+  padding: 0 120px
+
+
+.kromtech-partners-item
+  min-width: 460px
+  margin-bottom: 40px
+  .partners-title
+    margin-bottom: 40px
+    position: relative
+    font-size: 20px
+    font-family: $medium-font
+    font-weight: normal
+    color: rgb(51, 51, 51)
+    text-transform: uppercase
+    line-height: 1.4
+    &:after
+      content: ""
+      border-bottom: 2px solid $accent-color
+      position: absolute
+      width: 255px
+      left: 0
+      bottom: -20px
+  &:nth-child(even)
+    .partners-title
+      &:after
+        width: 295px
+  &:nth-child(2)
+    .partners-title
+      margin-bottom: 45px
+
+

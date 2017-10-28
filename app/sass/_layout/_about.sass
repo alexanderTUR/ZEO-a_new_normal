@@ -1,0 +1,204 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.about-container
+  background-color: rgb(54, 54, 54)
+  max-width: 1400px
+  margin: 0 auto
+  padding: 110px 120px 70px
+  .backtotop-button
+    background-color: rgb(85, 85, 85)
+    .section-name
+      color: rgb(243, 243, 243)
+
+.about-title
+  margin-top: 75px
+  margin-bottom: 50px
+  font-size: 36px
+  font-family: $bold-font
+  color: rgb(255, 86, 7)
+  text-transform: uppercase
+  line-height: 1.33
+  text-align: center
+
+.about-subtitle
+  font-size: 14px
+  margin-bottom: 50px
+  padding: 0 265px
+  font-family: $light-font
+  color: rgb(255, 255, 255)
+  text-transform: uppercase
+  line-height: 2
+  text-align: center
+
+.story-list
+  position: relative
+  padding: 0 120px
+  margin-bottom: 100px
+
+.story-item
+  display: flex
+  margin-bottom: 50px
+
+.story-year
+  font-size: 13px
+  font-family: $medium-font
+  color: rgb(255, 86, 7)
+  text-transform: uppercase
+  line-height: 2
+  margin-right: 70px
+
+.story-text
+  font-size: 14px
+  font-family: $light-font
+  color: rgb(255, 255, 255)
+  line-height: 2
+  text-align: left
+
+.story-text_shift
+  margin-left: 100px
+
+.story-sep-container
+  position: absolute
+  top: 0
+  left: 185px
+  height: 100%
+  margin-top: 8px
+
+.story-sep-line
+  width: 2px
+  height: 100%
+  background-color: $accent-color
+
+.story-sep-circle
+  border: 2px solid $accent-color
+  border-radius: 50%
+  background-color: rgb(54, 54, 54)
+  position: absolute
+  width: 10px
+  height: 10px
+  left: -4px
+  &:nth-child(2)
+    top: 190px
+  &:nth-child(3)
+    top: 380px
+  &:nth-child(4)
+    top: 570px
+
+.management-title
+  margin-bottom: 55px
+  font-size: 20px
+  font-family: $medium-font
+  color: rgb(255, 255, 255)
+  text-transform: uppercase
+  line-height: 1.4
+  text-align: center
+
+.managers-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  align-content: center
+  .manager-block
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    font-size: 14px
+    font-family: $medium-font
+    color: rgb(255, 255, 255)
+    line-height: 1.57
+  .manager-position
+    flex: 0 0 170px
+    font-family: $light-font
+    font-size: 13px
+  .manager-name
+    flex: 0 0 170px
+  .manager-linkedin-link
+    position: absolute
+    bottom: -5px
+    right: 40px
+    display: block
+    width: 24px
+    height: 24px
+    svg
+      display: block
+      width: 100%
+      height: auto
+  .manager-img-container
+    margin-bottom: 14px
+    flex: 0 0 170px
+    position: relative
+    img
+      margin: 0 auto
+      display: block
+      position: relative
+      border-radius: 50%
+    &:before
+      content: ""
+      border: 1px solid $accent-color
+      border-radius: 50%
+      position: absolute
+      width: 88px
+      height: 88px
+      top: -4px
+      left: 41px
+  .manager-item
+    margin-bottom: 70px
+    display: flex
+    text-align: center
+    &:nth-child(1)
+      padding-right: 4%
+      flex: 1 1 50%
+      justify-content: flex-end
+      .manager-block
+        justify-content: flex-end
+  .manager-item
+    &:nth-child(2)
+      padding-left: 4%
+      flex: 1 1 50%
+  .manager-item
+    &:nth-child(3)
+      flex: 1 1 33%
+      justify-content: flex-end
+      .manager-block
+        justify-content: flex-end
+  .manager-item
+    &:nth-child(4)
+      flex: 1 1 33%
+      justify-content: center
+      .manager-block
+        justify-content: center
+  .manager-item
+    &:nth-child(5)
+      flex: 1 1 33%
+  .manager-item
+    &:nth-child(6)
+      flex: 1 1 20%
+      justify-content: center
+      .manager-block
+        justify-content: center
+  .manager-item
+    &:nth-child(7)
+      flex: 1 1 20%
+      justify-content: center
+      .manager-block
+        justify-content: center
+  .manager-item
+    &:nth-child(8)
+      flex: 1 1 20%
+      justify-content: center
+      .manager-block
+        justify-content: center
+  .manager-item
+    &:nth-child(9)
+      flex: 1 1 20%
+      justify-content: center
+      .manager-block
+        justify-content: center
+  .manager-item
+    &:nth-child(10)
+      flex: 1 1 20%
+      justify-content: center
+      .manager-block
+        justify-content: center

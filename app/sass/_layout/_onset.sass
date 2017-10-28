@@ -1,0 +1,148 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.onset-section
+  background-color: rgb(53, 53, 53)
+  .learn-more-wrapper
+    text-align: center
+  .backtotop-button
+    background-color: rgb(85, 85, 85)
+    .section-name
+      color: rgb(243, 243, 243)
+
+.onset-container
+  max-width: 1400px
+  margin: 0 auto
+  padding: 80px 120px
+
+.onset-top-container
+  @include clearfix
+  
+.onset-logo-container
+  float: left
+  svg
+    display: block
+    width: 82px
+    height: 38px
+
+.onset-content-wrapper
+  display: flex
+  padding-top: 30px
+  margin-bottom: 40px
+
+.onset-aside
+  width: 480px
+
+.onset-info
+  width: 920px
+  padding: 10px 0 0 40px
+
+.onset-why-head, .onset-how-head
+  font-size: 13px
+  color: $accent-color
+  text-transform: uppercase
+  line-height: 3.2
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: -8px
+    border-bottom: 1px solid $accent-color
+    width: 91px
+
+.onset-how-text, .onset-why-text
+  font-family: $light-font
+  display: block
+  font-size: 14px
+  color: rgb(243, 243, 243)
+  line-height: 2
+  padding-right: 15px
+
+.onset-why-text
+  margin-bottom: 30px
+
+.onset-reelvalley-title
+  margin: 0 0 30px 0
+  font-size: 20px
+  font-family: $medium-font
+  color: rgb(255, 255, 255)
+  text-transform: uppercase
+  font-weight: normal
+  line-height: 1.4
+
+.onset-reelvalley-text
+  font-size: 14px
+  font-family: $light-font
+  color: rgb(255, 255, 255)
+  line-height: 2
+  padding-right: 90px
+  margin-bottom: 80px
+
+.onset-reelvalley-img-container
+  width: 640px
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.onset-reelvalley-list
+  display: flex
+  justify-content: center
+  margin-bottom: 75px
+
+.onset-reelvalley-item
+  display: flex
+  margin: 0 100px
+  width: 240px
+  position: relative
+  left: 100px
+  .onset-item-icon
+    top: -15px
+    left: -100px
+    border-radius: 50%
+    background-color: rgb(49, 49, 49)
+    width: 120px
+    height: 120px
+    position: absolute
+    display: flex
+    z-index: 10
+    svg
+      margin: auto
+      width: 42px
+      height: 30px
+  &:first-child
+    margin: 0
+    .onset-item-icon
+      svg
+        width: 32px
+        height: 30px
+  &:last-child
+    margin: 0
+    .onset-item-icon
+      svg
+        width: 33px
+        height: 32px
+
+.onset-item-icon
+  width: 42px
+  height: 42px
+
+.onset-item-info
+  width: 170px
+  z-index: 20
+
+.onset-item-title
+  padding-right: 70px
+  margin: 0 0 10px 0
+  font-size: 12px
+  font-weight: normal
+  color: rgb(213, 210, 214)
+  text-transform: uppercase
+  line-height: 1.7
+
+.onset-item-text
+  margin: 0
+  font-size: 12px
+  color: rgb(115, 115, 115)
+  line-height: 1.7

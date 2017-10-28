@@ -1,0 +1,261 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.randd-section
+  background-color: rgb(228, 228, 228)
+  .learn-more-wrapper
+    text-align: center
+    padding-bottom: 85px
+    margin-bottom: 65px
+    border-bottom: 1px solid rgb(204, 204, 204)
+
+.randd-container
+  max-width: 1400px
+  margin: 0 auto
+  .backtotop-button
+    margin-right: 0
+    margin-top: 60px
+    background-color: rgb(200, 200, 200)
+
+.randd-top-container
+  @include clearfix
+  padding: 80px 120px 0
+  margin-bottom: 30px
+
+.randd-why-container
+  margin-bottom: 20px
+  
+.randd-logo-container
+  float: left
+  svg
+    display: block
+    width: 102px
+    height: 102px
+
+.randd-content-wrapper
+  display: flex
+  padding: 0 120px 60px
+
+.randd-aside
+  width: 480px
+
+.egg-info
+  width: 920px
+  padding-top: 30px
+  padding-left: 60px
+
+.randd-why-head, .randd-how-head
+  font-size: 13px
+  color: $accent-color
+  text-transform: uppercase
+  line-height: 3.2
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: -10px
+    border-bottom: 1px solid $accent-color
+    width: 91px
+
+.randd-how-text, .randd-why-text
+  display: block
+  font-size: 21px
+  color: rgb(51, 51, 51)
+  line-height: 2
+
+.egg-logo
+  width: 176px
+  height: 78px
+  margin-bottom: 30px
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.egg-title, .jammy-title
+  padding-right: 150px
+  font-size: 20px
+  font-family: $medium-font
+  color: rgb(51, 51, 51)
+  text-transform: uppercase
+  line-height: 1.4
+  margin: 0 0 20px 0
+  font-weight: normal
+
+.egg-text, .jammy-text
+  font-family: $light-font
+  font-size: 14px
+  line-height: 2
+  color: rgb(51, 51, 51)
+
+.youtube-container
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  iframe, embed, object
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.egg-features-container
+  margin: 0 120px 60px
+  padding: 60px 120px
+  background-color: $accent-color
+
+.egg-features-title
+  margin: 0 0 30px 0
+  font-size: 20px
+  font-family: $medium-font
+  font-weight: normal
+  color: rgb(255, 255, 255)
+  text-transform: uppercase
+  line-height: 1.4
+  text-align: center
+
+.egg-features-wrapper
+  display: flex
+  justify-content: space-between
+
+.egg-feature
+  display: flex
+
+.egg-feature-icon
+  width: 50px
+  margin-top: 15px
+
+.egg-feature-info
+  width: 380px
+  padding-left: 20px
+
+.egg-feature-title
+  margin: 0
+  font-size: 16px
+  font-weight: normal
+  font-family: $medium-font
+  color: rgb(255, 255, 255)
+  line-height: 2.6
+
+.egg-feature-text
+  margin: 0
+  font-size: 14px
+  font-family: $light-font
+  color: rgb(255, 255, 255)
+  line-height: 2
+
+.egg-quote-container
+  border: 1px solid rgb(70, 70, 70)
+  margin: 0 350px 60px
+  padding: 55px 60px 45px
+  text-align: right
+  font-size: 21px
+  color: rgb(51, 51, 51)
+  line-height: 1.7
+
+.egg-quote-icon
+  width: 41px
+  height: 30px
+  svg
+    display: block
+
+.egg-quote-text
+  text-align: left
+  margin: 15px 0
+
+.egg-quote-author
+  position: relative
+  font-family: $light-font
+  &:before
+    content: ""
+    border-bottom: 1px solid rgb(194, 194, 194)
+    position: absolute
+    width: 175px
+    left: -195px
+    bottom: 12px
+
+.egg-partners-container
+  padding-bottom: 80px
+  margin-bottom: 80px
+  border-bottom: 1px solid rgb(204, 204, 204)
+  img
+      display: block
+      margin: 0 auto
+
+.jammy-info
+  @include clearfix
+  padding: 0 120px
+  margin-bottom: 90px
+    
+.jammy-logo
+  float: left
+  margin-right: 60px
+  img
+    display: block
+
+.jammy-container
+  padding-top: 10px
+
+.jammy-features-container
+  padding-top: 55px
+
+.jammy-features-title
+  margin: 0 0 40px 0
+  font-size: 20px
+  font-family: $medium-font
+  color: rgb(51, 51, 51)
+  text-transform: uppercase
+  line-height: 1.4
+  text-align: center
+  font-weight: normal
+
+.jammy-features-wrapper
+  display: flex
+  flex-wrap: wrap
+  //justify-content: space-around
+  justify-content: center
+
+.jammy-feature
+  display: flex
+  position: relative
+  left: 50px
+  width: 480px
+  margin-bottom: 50px
+
+.jammy-feature-icon
+  width: 50px
+  margin-top: 13px
+
+.jammy-feature-info
+  width: 350px
+  padding-left: 35px
+
+.jammy-feature-title
+  margin: 0
+  font-size: 16px
+  font-family: $medium-font
+  color: rgb(51, 51, 51)
+  line-height: 2.6
+  font-weight: normal
+
+.jammy-feature-text
+  font-size: 14px
+  font-family: $light-font
+  color: rgb(51, 51, 51)
+  line-height: 2
+
+.indiegogo-banner
+  width: 100%
+  margin-bottom: 100px
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.jammy-partners-container
+  margin-bottom: 90px
+  img
+    display: block
+    margin: 0 auto
