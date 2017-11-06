@@ -1,43 +1,86 @@
 @import "../vars"
+@import "../_mixins/helpers"
 
 .zeo-university-section
+  position: relative
+  z-index: 10
+  //TODO var
   background-color: rgb(209, 209, 209)
+  .learn-more-wrapper
+    +media-width-max(768)
+      text-align: center
 
 .zeo-university-container
+  display: flex
   max-width: 1400px
   margin: 0 auto
   padding: 80px 0
-  display: flex
   justify-content: center
+  +media-width-max(1024)
+    padding-top: 150px
+    padding-right: 2%
+    padding-left: 2%
+  +media-width-max(768)
+    flex-wrap: wrap
 
 .zeo-university-img-container
-  width: 700px
+  flex: 1 1 50%
+  +media-width-max(768)
+    flex: 1 1 100%
+    padding: 0 15%
+    margin-bottom: 40px
+  +media-width-max(640)
+    padding: 0
   img
-    display: block
-    width: 100%
-    height: auto
+    +img
 
 .zeo-university-info-container
-  width: 700px
-  padding: 0 60px
+  flex: 1 1 50%
+  padding: 30px 4% 0
+  +media-width-max(1376)
+    padding-top: 0
+  +media-width-max(1024)
+    padding-right: 0
+  +media-width-max(768)
+    flex: 1 1 100%
+    padding: 0
 
 .zeo-university-header
   display: flex
   align-items: center
-  margin: 30px 0 40px
-  .zeo-university-title
-    margin: 0 0 0 20px
-    font-weight: normal
-    font-size: 28px
-    color: $accent-color
-    line-height: 1.5
+  margin-bottom: 40px
+  +media-width-max(1024)
+    margin-bottom: 30px
+  +media-width-max(768)
+    position: absolute
+    top: 60px
+    left: 0
+    right: 0
+    justify-content: center
+
+.university-icon-container
+  width: 56px
+  height: 41px
+  margin-right: 20px
   svg
-    width: 56px
-    height: 51px
+    +img
+
+.zeo-university-title
+  font-size: 28px
+  line-height: 1.5
+  color: $accent-color
 
 .zeo-university-text
-  font-size: 14px
+  margin-bottom: 35px
   font-family: $light-font
-  color: rgb(51, 51, 51)
+  font-size: 14px
   line-height: 2
-  margin: 40px 0
+  color: $dark-color
+  +media-width-max(1024)
+    margin-bottom: 30px
+  .text-accent
+    font-family: $regular-font
+  &:nth-child(3)
+    margin-bottom: 60px
+    +media-width-max(1024)
+      margin-bottom: 30px

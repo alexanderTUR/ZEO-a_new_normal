@@ -2,88 +2,149 @@
 @import "../_mixins/helpers"
 
 .how-container
+  position: relative
   max-width: 1400px
   margin: 0 auto
-  position: relative
   padding-bottom: 90px
-  .backtotop-button
-    margin-top: 70px
 
 .how-title
-  margin: 0 0 60px 0
-  padding-top: 170px
-  text-align: center
-  font-size: 28px
+  margin-bottom: 60px
+  padding: 170px 10% 0
   font-family: $bold-font
-  color: rgb(51, 51, 51)
+  font-size: 28px
+  text-align: center
   text-transform: uppercase
   line-height: 1.7
+  color: $dark-color
 
 .how-slider-wrapper
   position: relative
   margin-bottom: 70px
   .slider-left-arrow, .slider-right-arrow
-    padding: 10px
-    height: 48px
-    cursor: pointer
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
     z-index: 10
+    box-sizing: content-box
+    width: 14px
+    height: 28px
+    top: 50%
+    padding: 10px
+    cursor: pointer
+    transform: translateY(-50%)
     svg
-      width: 14px
-      height: 28px
+      +img
   .slider-left-arrow
     left: 40px
+    +media-width-max(1024)
+      left: 0
+    +media-width-max(768)
+      top: initial
+      bottom: 80px
+      left: 4%
+      transform: none
+      .left-arrow
+        stroke: #fff
   .slider-right-arrow
     right: 40px
+    +media-width-max(1024)
+      right: 0
+    +media-width-max(768)
+      top: initial
+      bottom: 80px
+      right: 4%
+      transform: none
+      .right-arrow
+        top: initial
+        stroke: #fff
+        transform: none
 
 .how-slider-container
-  padding: 0 120px
+  padding: 0 8%
+  +media-width-max(1024)
+    padding-right: 2%
+    padding-left: 2%
   .slider-item
     position: relative
     .img-container
-      width: 960px
-      margin: 0 auto 35px
+      padding: 0 8% 30px
+      +media-width-max(1376)
+        padding-right: 5%
+        padding-left: 5%
+      +media-width-max(1024)
+        padding-right: 40px
+        padding-left: 40px
+        padding-bottom: 45px
+      +media-width-max(768)
+        padding-right: 0
+        padding-left: 0
+        padding-bottom: 30px
       img
-        width: 100%
-        height: auto
+        +img
     .slide-title-container
       background-color: $accent-color
       position: absolute
+      overflow: hidden
       bottom: 0
       width: 590px
       padding: 40px 60px
+      +media-width-max(768)
+        width: 100%
+        bottom: 30px
+        padding-right: calc(9% + 110px)
+      +media-width-max(640)
+        position: relative
+        top: initial
+        bottom: 30px
+        left: initial
+        right: initial
+        padding-right: 40px
       .slide-title
         margin: 0 0 10px 0
-        font-size: 21px
         font-family: $bold-font
+        font-size: 21px
         font-weight: normal
-        color: rgb(243, 243, 243)
-        text-transform: uppercase
         line-height: 1.8
+        text-transform: uppercase
+        color: $dirty-white-color
       .slide-subtitle
-        color: rgb(243, 243, 243)
         font-family: $light-font
+        color: $dirty-white-color
     .slide-counter-container
       position: absolute
       display: flex
-      right: 40px
+      right: 3%
       bottom: 0
-      background-color: rgb(104, 104, 104)
       width: 109px
       height: 106px
+      background-color: $counter-color
+      +media-width-max(1024)
+        right: 0
+      +media-width-max(768)
+        right: 9%
+      +media-width-max(640)
+        height: 50px
+        position: absolute
       .counter
         margin: auto
         font-size: 20px
         font-family: $light-font
-        color: rgb(243, 243, 243)
         letter-spacing: 5px
+        color: $dirty-white-color
 
 .how-text
-  font-size: 16px
-  font-family: $light-font
-  color: rgb(51, 51, 51)
-  line-height: 2
   margin: 0
-  padding: 0 230px
+  padding: 0 8%
+  font-family: $light-font
+  font-size: 16px
+  line-height: 2
+  color: $dark-color
+  +media-width-max(1024)
+    padding-right: 2%
+    padding-left: 2%
+  .how-text-wrap
+    display: inline-block
+    padding: 0 5%
+    +media-width-max(1024)
+      padding-right: 40px
+      padding-left: 40px
+    +media-width-max(768)
+      padding: 0
