@@ -183,6 +183,10 @@
   margin-right: 2%
   margin-left: 2%
   margin-bottom: 20px
+  img
+    +scale-out(1)
+    &:hover
+      +scale-in(1.1)
 
 .jammy-info
   @include clearfix
@@ -245,6 +249,8 @@
   .indiegogo-link
     display: block
     width: 100%
+    img
+      +img
 
 .jammy-partners-container
   display: flex
@@ -255,6 +261,10 @@
   margin-bottom: 90px
   padding-right: 8%
   padding-left: 8%
+  img
+    +scale-out(1)
+    &:hover
+      +scale-in(1.1)
   +media-width-max(1024)
     padding-right: 2%
     padding-left: 2%

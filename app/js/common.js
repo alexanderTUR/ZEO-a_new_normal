@@ -1,5 +1,7 @@
 $(function() {
 
+	$('#top').fadeIn();
+
 	var $burgerIcon = $('.burger-icon');
 	var $menuList = $('.main-menu-list');
 

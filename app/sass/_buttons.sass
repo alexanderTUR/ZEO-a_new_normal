@@ -16,6 +16,12 @@
     text-transform: uppercase
   .backtotop-link
     display: flex
+    .backtotop-1
+      transition: fill .2s ease-in
+    &:hover
+      .backtotop-1
+        fill: $accent-hover-color
+        transition: fill .2s ease-out
   svg
     width: 58px
     height: 41px
@@ -47,6 +53,10 @@
   height: 32px
   cursor: pointer
   background-color: $accent-color
+  transition: background .2s ease-out
+  &:hover
+    background-color: $accent-hover-color
+    transition: background .2s ease-in
   .aggregator-next-text
     font-family: $medium-font
     font-size: 13px
@@ -69,4 +79,7 @@
   cursor: pointer
   transform: translateY(-50%)
   svg
+    +scale-out(1)
     +img
+  &:hover>svg
+    +scale-in(1.4)
