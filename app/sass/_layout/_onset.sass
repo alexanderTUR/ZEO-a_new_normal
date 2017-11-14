@@ -2,117 +2,84 @@
 @import "../_mixins/helpers"
 
 .onset-section
-  background-color: rgb(53, 53, 53)
+  position: relative
+  z-index: 10
+  background-color: $dark-bg-color
   .learn-more-wrapper
     text-align: center
   .backtotop-button
-    background-color: rgb(85, 85, 85)
+    background-color: $dark-button-bg
     .section-name
-      color: rgb(243, 243, 243)
+      color: $dirty-white-color
 
 .onset-container
-  max-width: 1400px
-  margin: 0 auto
-  padding: 80px 120px
+  @extend .kromtech-container
 
-.onset-top-container
-  @include clearfix
+.onset-wrapper
+  @extend .kromtech-wrapper
   
-.onset-logo-container
-  float: left
-  svg
-    display: block
-    width: 82px
-    height: 38px
+.onset-logo
+  width: 82px
+  height: 38px
 
-.onset-content-wrapper
-  display: flex
-  padding-top: 30px
-  margin-bottom: 40px
-
-.onset-aside
-  width: 480px
-
-.onset-info
-  width: 920px
-  padding: 10px 0 0 40px
-
-.onset-why-head, .onset-how-head
-  font-size: 13px
-  color: $accent-color
-  text-transform: uppercase
-  line-height: 3.2
-  position: relative
-  &:after
-    content: ""
-    position: absolute
-    left: 0
-    bottom: -8px
-    border-bottom: 1px solid $accent-color
-    width: 91px
-
-.onset-how-text, .onset-why-text
-  font-family: $light-font
-  display: block
-  font-size: 14px
-  color: rgb(243, 243, 243)
-  line-height: 2
-  padding-right: 15px
-
-.onset-why-text
-  margin-bottom: 30px
-
-.onset-reelvalley-title
-  margin: 0 0 30px 0
-  font-size: 20px
-  font-family: $medium-font
-  color: rgb(255, 255, 255)
-  text-transform: uppercase
-  font-weight: normal
-  line-height: 1.4
-
-.onset-reelvalley-text
-  font-size: 14px
-  font-family: $light-font
-  color: rgb(255, 255, 255)
-  line-height: 2
-  padding-right: 90px
-  margin-bottom: 80px
-
-.onset-reelvalley-img-container
-  width: 640px
+.onset-img-container
+  width: 86%
+  +media-width-max(1024)
+    width: 65%
+    margin: 0 auto
+  +media-width-max(768)
+    width: 80%
   img
-    display: block
-    width: 100%
-    height: auto
+    +img
 
-.onset-reelvalley-list
+.onset-advent-list
   display: flex
-  justify-content: center
-  margin-bottom: 75px
+  flex-wrap: wrap
+  justify-content: space-around
+  margin: 50px 8% 75px
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
 
-.onset-reelvalley-item
+.onset-advent-item
   display: flex
-  margin: 0 100px
-  width: 240px
   position: relative
-  left: 100px
+  left: 5%
+  +media-width-max(1024)
+    display: block
+    left: 0
+    text-align: center
+  +media-width-max(640)
+    justify-content: center
+    display: flex
+    flex: 0 0 100%
+    margin-bottom: 20px
   .onset-item-icon
-    top: -15px
-    left: -100px
-    border-radius: 50%
-    background-color: rgb(49, 49, 49)
-    width: 120px
-    height: 120px
     position: absolute
     display: flex
     z-index: 10
+    top: -15px
+    left: -100px
+    border-radius: 50%
+    background-color: $dark-on-dark-bg-color
+    width: 120px
+    height: 120px
+    +media-width-max(1024)
+      position: static
+      left: 0
+      margin: 0 auto 20px
+    +media-width-max(640)
+      margin: 0 20px
+    +media-width-max(480)
+      margin-left: 0
     svg
       margin: auto
       width: 42px
       height: 30px
   &:first-child
     margin: 0
+    +media-width-max(640)
+      margin-bottom: 20px
     .onset-item-icon
       svg
         width: 32px
@@ -124,25 +91,28 @@
         width: 33px
         height: 32px
 
-.onset-item-icon
-  width: 42px
-  height: 42px
-
 .onset-item-info
   width: 170px
   z-index: 20
+  +media-width-max(640)
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+    width: 50%
+    text-align: left
 
 .onset-item-title
   padding-right: 70px
   margin: 0 0 10px 0
   font-size: 12px
-  font-weight: normal
-  color: rgb(213, 210, 214)
-  text-transform: uppercase
   line-height: 1.7
+  text-transform: uppercase
+  color: $gray-light-color
+  +media-width-max(1024)
+    padding-right: 0
 
 .onset-item-text
   margin: 0
   font-size: 12px
-  color: rgb(115, 115, 115)
   line-height: 1.7
+  color: $gray-color

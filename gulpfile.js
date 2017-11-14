@@ -8,6 +8,7 @@ var gulp           = require('gulp'),
 		del            = require('del'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
+		rigger         = require('gulp-rigger'),
 		notify         = require("gulp-notify");
 
 gulp.task('common-js', function() {
@@ -45,6 +46,13 @@ gulp.task('browser-sync', function() {
 	});
 });
 
+gulp.task('html', function () {
+	gulp.src('app/html/*.html')
+		.pipe(rigger()).on("error", notify.onError())
+		.pipe(gulp.dest('app/'))
+		.pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
@@ -55,7 +63,8 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {
+	gulp.watch('app/html/**/*.html', ['html']);
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);

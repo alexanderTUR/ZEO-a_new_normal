@@ -1,0 +1,128 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.zoom-section
+  position: relative
+  z-index: 10
+  background-color: $white-color
+  .backtotop-button
+    margin-top: 70px
+  .company-info-text
+    margin-bottom: 40px
+  .learn-more-wrapper
+    width: 100%
+    margin-bottom: 60px
+    text-align: center
+  .company-why-container
+    +media-width-max(1024)
+      width: 30%
+    +media-width-max(640)
+      margin-left: 0
+      width: 100%
+  .company-how-container
+    +media-width-max(1024)
+      width: 70%
+    +media-width-max(640)
+      margin-left: 0
+      width: 100%
+      margin-bottom: 0
+  .company-aside
+    +media-width-max(1024)
+      margin-bottom: 50px
+
+.zoom-container
+  max-width: 1400px
+  margin: 0 auto
+
+.randd-wrapper
+  @extend .kromtech-wrapper
+
+.zoom-img-container
+  width: 100%
+  margin-bottom: -80px
+  +media-width-max(1024)
+    padding-right: 10%
+    padding-left: 10%
+  +media-width-max(480)
+    margin-bottom: -50px
+    padding-right: 0
+    padding-left: 0
+  img
+    +img
+
+.zoom-logo
+  width: 291px
+  height: 76px
+  margin-top: 60px
+  svg
+    +img
+
+.zoom-features-container
+  .company-advent-list
+    justify-content: center
+  .company-advent-item
+    width: 40%
+    +media-width-max(1024)
+      width: 50%
+    +media-width-max(640)
+      width: 100%
+
+.zoom-customers-wrapper
+  position: relative
+  width: 100%
+  margin-bottom: 50px
+  .customers-list
+    +media-width-max(1024)
+      padding-right: 60px
+      padding-left: 60px
+    +media-width-max(480)
+      padding-right: 30px
+      padding-left: 30px
+  .slider-left-arrow
+    left: -60px
+    +media-width-max(1024)
+      left: 0
+  .slider-right-arrow
+    right: -60px
+    +media-width-max(1024)
+      right: 0
+  .company-info-title
+    margin-bottom: 40px
+    +media-width-max(768)
+      text-align: center
+  .customers-head
+    display: flex
+    +media-width-max(1024)
+      display: block
+    +media-width-max(768)
+      display: flex
+    +media-width-max(768)
+      justify-content: center
+  .customers-place
+    display: block
+  .customers-head
+    margin-bottom: 15px
+  .customers-img
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    margin-right: 12px
+    img
+      +img
+  .customers-profile
+    margin-top: 10px
+  .customers-name
+    font-size: 16px
+    font-family: $medium-font
+    color: $dark-color
+    line-height: 1.75
+  .customers-place
+    font-size: 13px
+    color: $dark-color
+    text-transform: uppercase
+  .customers-text
+    font-size: 13px
+    font-family: $light-font
+    color: rgb(51, 51, 51)
+    line-height: 1.85
+    padding-right: 10%

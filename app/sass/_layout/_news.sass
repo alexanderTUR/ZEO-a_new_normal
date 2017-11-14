@@ -1,13 +1,23 @@
 @import "../vars"
+@import "../_mixins/helpers"
+
+.news-section
+  position: relative
+  z-index: 10
+  background-color: $white-color
+  .aggregator-container
+    margin: 60px 0
+
+.news-wrapper
+  margin: 0 8%
+  padding-top: 60px
+  border-bottom: 1px solid $border-color
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
 
 .news-container
   max-width: 1400px
   margin: 0 auto
-  padding: 70px 0 0 0
-  border-bottom: 1px solid rgb(204, 204, 204)
   .backtotop-button
-    margin-right: 120px
-    background-color: rgb(246, 246, 246)
-
-.aggregator-container
-    margin-top: 80px
+    background-color: $gray-bg-color

@@ -1,18 +1,19 @@
 @import "vars"
+@import "_mixins/helpers"
 
 .backtotop-button
+  float: right
   display: flex
   align-items: center
   justify-content: flex-end
-  background-color: rgb(233, 233, 233)
+  background-color: $light-button-bg
   width: 200px
   height: 41px
-  float: right
   .section-name
-    font-size: 13px
-    color: rgb(51, 51, 51)
-    text-transform: uppercase
     margin-right: 20px
+    font-size: 13px
+    color: $dark-color
+    text-transform: uppercase
   .backtotop-link
     display: flex
   svg
@@ -20,39 +21,52 @@
     height: 41px
 
 .learn-more-button
-  background-color: $accent-color
   display: inline-block
+  background-color: $accent-color
   .learn-more-link
     display: block
-    padding: 15px 35px
     width: 100%
     height: 100%
-    text-decoration: none
-    font-size: 13px
+    padding: 15px 35px
     font-family: $medium-font
+    font-size: 13px
+    text-decoration: none
     text-transform: uppercase
     letter-spacing: 2px
-    color: rgb(255, 255, 255)
+    color: $white-color
   svg
     width: 10px
     height: 9px
     margin-left: 14px
 
 .aggregator-next-button
-  cursor: pointer
-  background-color: $accent-color
   display: flex
   justify-content: center
   align-items: center
   width: 102px
   height: 32px
+  cursor: pointer
+  background-color: $accent-color
   .aggregator-next-text
-    font-size: 13px
     font-family: $medium-font
+    font-size: 13px
     text-transform: uppercase
     letter-spacing: 2px
-    color: rgb(255, 255, 255)
+    color: $white-color
   svg
     width: 10px
     height: 9px
     margin-left: 7px
+
+.slider-left-arrow, .slider-right-arrow
+  position: absolute
+  z-index: 10
+  box-sizing: content-box
+  width: 14px
+  height: 28px
+  top: 50%
+  padding: 30px 10px
+  cursor: pointer
+  transform: translateY(-50%)
+  svg
+    +img

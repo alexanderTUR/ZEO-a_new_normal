@@ -1,7 +1,124 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+.blog-section
+  position: relative
+  z-index: 10
+  background-color: $white-color
+
 .blog-container
   max-width: 1400px
   margin: 0 auto
-  padding: 70px 0 90px 0
+  padding: 60px 0
   .backtotop-button
-    margin-right: 120px
-    background-color: rgb(246, 246, 246)
+    background-color: $gray-bg-color
+  +media-width-max(768)
+    .aggregator-control-container
+      display: none
+
+.blog-wrapper
+  margin: 0 8%
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
+
+.blog-aggregator-container
+  padding-top: 90px
+  .slider-left-arrow, .slider-right-arrow
+    display: none
+  .slider-left-arrow
+    left: 40px
+    +media-width-max(768)
+      display: block
+      left: 0
+  .slider-right-arrow
+    right: 40px
+    +media-width-max(768)
+      display: block
+      right: 0
+
+.blog-aggregator-list
+  margin-bottom: 50px
+  +media-width-max(768)
+    margin-bottom: 0
+    margin-right: 8%
+    margin-left: 8%
+
+.aggregator-item-wrapper
+  display: flex
+  flex-wrap: nowrap
+  justify-content: center
+
+.blog-item-img, .blog-item-info
+  flex: 0 0 50%
+
+.blog-item-img
+  img
+    +img
+    padding-right: 7%
+  +media-width-max(1376)
+    flex: 0 0 29%
+  +media-width-max(1024)
+    img
+      padding-right: 10%
+
+.blog-item-info
+  padding-right: 10px
+  color: $dark-color
+  +media-width-max(1376)
+    flex: 0 0 71%
+  +media-width-max(480)
+    padding-right: 0
+
+.blog-item-author
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+  .author-img
+    width: 40px
+    height: 40px
+    margin: 0 10px 30px 0
+    img
+      +img
+      border-radius: 50%
+
+.author-info
+  font-family: $medium-font
+  font-size: 14px
+  line-height: 1.5
+
+.author-position
+  font-family: $light-font
+  font-size: 12px
+
+.author-name, .author-position, .blog-item-date
+  display: inline-block
+
+.blog-item-title
+  font-family: $medium-font
+  font-size: 16px
+  line-height: 1.2
+
+.blog-item-date
+  margin-bottom: 15px
+  font-family: $light-font
+  font-size: 12px
+  line-height: 1.5
+
+.blog-item-text
+  font-family: $light-font
+  font-size: 13px
+  line-height: 1.7
+
+.blog-item-more-link
+  padding: 5px 5px 5px 0
+  font-size: 13px
+  line-height: 2.5
+  text-decoration: none
+  color: $accent-color
+  svg
+    position: relative
+    top: 1px
+    width: 10px
+    height: 9px
+    margin-left: 7px

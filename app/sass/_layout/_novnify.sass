@@ -2,61 +2,52 @@
 @import "../_mixins/helpers"
 
 .novnify-section
-  background-color: rgb(57, 57, 57)
+  position: relative
+  z-index: 10
+  background-color: $dark-bg-color
   .backtotop-button
-    background-color: rgb(85, 85, 85)
+    background-color: $dark-button-bg
+    margin-bottom: 50px
     .section-name
-      color: rgb(243, 243, 243)
+      color: $dirty-white-color
   .learn-more-wrapper
     text-align: center
+    padding-bottom: 50px
+  .aggregator-container
+    margin-left: 8%
+    margin-right: 8%
+    +media-width-max(768)
+      margin-left: 2%
+      margin-right: 2%
+  .company-aside
+    +media-width-max(1024)
+      display: none
+  .company-info-block
+    +media-width-max(1024)
+      padding-left: 12%
+      padding-right: 12%
+    +media-width-max(1024)
+      padding-left: 0
+      padding-right: 0
 
 .novnify-container
-  max-width: 1400px
-  margin: 0 auto
-  padding: 80px 120px
+  @extend .kromtech-container
+  padding-bottom: 70px
 
 .novnify-logo-container
   float: left
 
 .novnify-top-container
-  @include clearfix
+  +clearfix
 
-.novnify-content-wrapper
-  display: flex
-  padding-top: 30px
-  margin-bottom: 40px
-
-.novnify-aside
-  width: 480px
-
-.novnify-info
-  width: 920px
-  padding: 10px 0 0 40px
-
-.novnify-why-head, .novnify-how-head
-  font-size: 13px
-  color: $accent-color
-  text-transform: uppercase
-  line-height: 3.2
-  position: relative
-  &:after
-    content: ""
-    position: absolute
-    left: 0
-    bottom: -8px
-    border-bottom: 1px solid $accent-color
-    width: 91px
-
-.novnify-how-text, .novnify-why-text
-  font-family: $light-font
-  display: block
-  font-size: 14px
-  color: rgb(243, 243, 243)
-  line-height: 2
-  padding-right: 15px
-
-.novnify-why-text
-  margin-bottom: 30px
+.novnify-key-container
+  +media-width-max(1024)
+    padding-left: 12%
+    padding-right: 12%
+    padding-bottom: 50px
+  +media-width-max(768)
+    padding-left: 0
+    padding-right: 0
 
 .novnify-stopad-icon
   display: inline-block
@@ -65,9 +56,7 @@
   height: 40px
   vertical-align: middle
   img
-    width: 100%
-    height: auto
-    display: block
+    +img
 
 .novnify-stopad-title
   margin: 0 0 20px 0
@@ -78,21 +67,18 @@
   font-weight: normal
   line-height: 1.4
 
-.novnify-stopad-text
-  font-size: 14px
-  font-family: $light-font
-  color: rgb(255, 255, 255)
-  line-height: 2
-  padding-right: 90px
-  margin-bottom: 50px
-
 .novnify-stopad-wrapper
   display: flex
+  flex-wrap: wrap
 
 .novnify-stopad-column
   flex: 1 1 40%
+  +media-width-max(480)
+    flex: 0 0 100%
   &:nth-child(2)
     flex: 1 1 60%
+    +media-width-max(480)
+      flex: 0 0 100%
 
 .novnify-stopad-item
   position: relative
@@ -116,7 +102,17 @@
   justify-content: space-around
   text-align: center
   margin-bottom: 80px
+  margin-left: 8%
+  margin-right: 8%
+  +media-width-max(1024)
+    margin-left: 2%
+    margin-right: 2%
+  +media-width-max(480)
+    flex-wrap: wrap
   .novnify-circle
+    +media-width-max(480)
+      flex: 0 0 100%
+      padding-bottom: 50px
     &:nth-child(1)
       color: rgb(255, 66, 3)
     &:nth-child(2)
@@ -124,8 +120,25 @@
     &:nth-child(3)
       color: rgb(77, 154, 251)
 
+.circle-img-container
+  +media-width-max(768)
+  width: 80%
+  margin: 0 auto 20px
+  img
+    +img
+
 
 .circle-text
   font-size: 18px
   line-height: 1.9
 
+.novnify-container
+  .aggregator-control-container
+    .aggregator-counter
+      .slick-active
+        button
+          color: rgb(102, 102, 102)
+
+.novnify-container
+  .aggregator-title, .aggregator-item-date, .aggregator-item-link
+    color: rgb(255, 255, 255)

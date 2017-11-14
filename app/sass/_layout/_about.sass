@@ -1,95 +1,132 @@
 @import "../vars"
 @import "../_mixins/helpers"
 
+.about-section
+  position: relative
+  z-index: 10
+  background-color: $white-color
+
 .about-container
-  background-color: rgb(54, 54, 54)
   max-width: 1400px
   margin: 0 auto
-  padding: 110px 120px 70px
+  padding: 110px 0 70px 0
+  background-color: $dark-bg-color
   .backtotop-button
-    background-color: rgb(85, 85, 85)
-    .section-name
-      color: rgb(243, 243, 243)
+    margin-right: 8%
+    background-color: $dark-button-bg
+  .section-name
+      color: $dirty-white-color
+  +media-width-max(1024)
+    .backtotop-button
+      margin-right: 2%
+  +media-width-max(768)
+    padding-top: 50px
+    .learn-more-button
+      margin-right: auto
+      margin-left: auto
 
 .about-title
-  margin-top: 75px
-  margin-bottom: 50px
-  font-size: 36px
+  margin: 75px 0 50px 0
   font-family: $bold-font
-  color: rgb(255, 86, 7)
+  font-size: 36px
   text-transform: uppercase
   line-height: 1.33
   text-align: center
+  color: $accent-color
+  +media-width-max(768)
+    margin-bottom: 10px
 
 .about-subtitle
-  font-size: 14px
   margin-bottom: 50px
-  padding: 0 265px
+  padding: 0 28%
   font-family: $light-font
-  color: rgb(255, 255, 255)
+  font-size: 14px
   text-transform: uppercase
   line-height: 2
   text-align: center
+  color: $white-color
+  +media-width-max(1024)
+    padding-right: 20%
+    padding-left: 20%
+  +media-width-max(768)
+    padding-right: 10%
+    padding-left: 10%
+
+.story-wrapper
+  position: relative
 
 .story-list
   position: relative
-  padding: 0 120px
+  padding: 0 16%
   margin-bottom: 100px
+  +media-width-max(1024)
+    padding-right: 2%
+    padding-left: 2%
 
 .story-item
   display: flex
+  position: relative
   margin-bottom: 50px
+  &:last-child
+    .story-sep-line
+      height: 100%
+    +media-width-max(768)
+      .story-sep-line
+        display: none
+  &:nth-last-child(2)
+    +media-width-max(768)
+      .story-sep-line
+        height: 100%
 
 .story-year
-  font-size: 13px
+  margin-right: 70px
   font-family: $medium-font
-  color: rgb(255, 86, 7)
+  font-size: 13px
   text-transform: uppercase
   line-height: 2
-  margin-right: 70px
+  color: $accent-color
+  +media-width-max(480)
+    margin-right: 40px
 
 .story-text
-  font-size: 14px
   font-family: $light-font
-  color: rgb(255, 255, 255)
+  font-size: 14px
   line-height: 2
   text-align: left
+  color: $white-color
 
 .story-text_shift
   margin-left: 100px
-
-.story-sep-container
-  position: absolute
-  top: 0
-  left: 185px
-  height: 100%
-  margin-top: 8px
+  +media-width-max(480)
+    margin-left: 74px
 
 .story-sep-line
+  position: absolute
   width: 2px
-  height: 100%
+  height: calc(100% + 50px)
+  left: 65px
+  top: 18px
   background-color: $accent-color
+  +media-width-max(480)
+    left: 50px
 
 .story-sep-circle
-  border: 2px solid $accent-color
-  border-radius: 50%
-  background-color: rgb(54, 54, 54)
   position: absolute
   width: 10px
   height: 10px
-  left: -4px
-  &:nth-child(2)
-    top: 190px
-  &:nth-child(3)
-    top: 380px
-  &:nth-child(4)
-    top: 570px
+  top: 8px
+  left: 61px
+  border: 2px solid $accent-color
+  border-radius: 50%
+  background-color: $dark-bg-color
+  +media-width-max(480)
+    left: 46px
 
 .management-title
   margin-bottom: 55px
-  font-size: 20px
   font-family: $medium-font
-  color: rgb(255, 255, 255)
+  font-size: 20px
+  color: $white-color
   text-transform: uppercase
   line-height: 1.4
   text-align: center
@@ -100,105 +137,187 @@
   justify-content: center
   align-items: center
   align-content: center
-  .manager-block
-    position: relative
-    display: flex
-    flex-wrap: wrap
-    font-size: 14px
-    font-family: $medium-font
-    color: rgb(255, 255, 255)
-    line-height: 1.57
-  .manager-position
-    flex: 0 0 170px
-    font-family: $light-font
-    font-size: 13px
-  .manager-name
-    flex: 0 0 170px
-  .manager-linkedin-link
-    position: absolute
-    bottom: -5px
-    right: 40px
+  padding: 0 8%
+  +media-width-max(1024)
+    padding-right: 2%
+    padding-left: 2%
+  +media-width-max(480)
+    padding-right: 0
+    padding-left: 0
+
+.manager-block
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  font-family: $medium-font
+  font-size: 14px
+  line-height: 1.57
+  color: $white-color
+
+.manager-position
+  flex: 0 0 160px
+  font-family: $light-font
+  font-size: 13px
+
+.manager-name
+  flex: 0 0 160px
+
+.manager-linkedin-link
+  position: absolute
+  right: 40px
+  bottom: -5px
+  width: 24px
+  height: 24px
+  svg
+    +img
+
+.manager-img-container
+  position: relative
+  flex: 0 0 160px
+  margin-bottom: 14px
+  img
     display: block
-    width: 24px
-    height: 24px
-    svg
-      display: block
-      width: 100%
-      height: auto
-  .manager-img-container
-    margin-bottom: 14px
-    flex: 0 0 170px
     position: relative
-    img
-      margin: 0 auto
-      display: block
-      position: relative
-      border-radius: 50%
-    &:before
-      content: ""
-      border: 1px solid $accent-color
-      border-radius: 50%
-      position: absolute
-      width: 88px
-      height: 88px
-      top: -4px
-      left: 41px
-  .manager-item
-    margin-bottom: 70px
-    display: flex
-    text-align: center
-    &:nth-child(1)
+    margin: 0 auto
+    border-radius: 50%
+  &:before
+    content: ""
+    position: absolute
+    width: 88px
+    height: 88px
+    top: -4px
+    left: 36px
+    border: 1px solid $accent-color
+    border-radius: 50%
+
+.manager-item
+  display: flex
+  margin-bottom: 70px
+  text-align: center
+  &:nth-child(1)
+    flex: 1 1 50%
+    justify-content: flex-end
+    padding-right: 4%
+    .manager-block
+      justify-content: flex-end
+    +media-width-max(480)
+      padding-right: 0
+  &:nth-child(2)
+    flex: 1 1 50%
+    padding-left: 4%
+    +media-width-max(480)
+      padding-left: 0
+  &:nth-child(3)
+    flex: 1 1 33%
+    justify-content: flex-end
+    .manager-block
+      justify-content: flex-end
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
       padding-right: 4%
+    +media-width-max(480)
+      padding-right: 0
+  &:nth-child(4)
+    flex: 1 1 33%
+    justify-content: center
+    .manager-block
+      justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
       flex: 1 1 50%
-      justify-content: flex-end
-      .manager-block
-        justify-content: flex-end
-  .manager-item
-    &:nth-child(2)
+      justify-content: flex-start
       padding-left: 4%
+      .manager-block
+        justify-content: flex-start
+    +media-width-max(480)
+      padding-left: 0
+  &:nth-child(5)
+    flex: 1 1 33%
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
       flex: 1 1 50%
-  .manager-item
-    &:nth-child(3)
-      flex: 1 1 33%
       justify-content: flex-end
+      padding-right: 4%
       .manager-block
         justify-content: flex-end
-  .manager-item
-    &:nth-child(4)
-      flex: 1 1 33%
+    +media-width-max(480)
+      padding-right: 0
+  &:nth-child(6)
+    flex: 1 1 20%
+    justify-content: center
+    .manager-block
       justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
+      justify-content: flex-start
+      padding-left: 4%
       .manager-block
-        justify-content: center
-  .manager-item
-    &:nth-child(5)
-      flex: 1 1 33%
-  .manager-item
-    &:nth-child(6)
-      flex: 1 1 20%
+        justify-content: flex-start
+    +media-width-max(480)
+      padding-left: 0
+  &:nth-child(7)
+    flex: 1 1 20%
+    justify-content: center
+    .manager-block
       justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
+      justify-content: flex-end
+      padding-right: 4%
       .manager-block
-        justify-content: center
-  .manager-item
-    &:nth-child(7)
-      flex: 1 1 20%
+        justify-content: flex-end
+    +media-width-max(480)
+      padding-right: 0
+  &:nth-child(8)
+    flex: 1 1 20%
+    justify-content: center
+    .manager-block
       justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
+      justify-content: flex-start
+      padding-left: 4%
       .manager-block
-        justify-content: center
-  .manager-item
-    &:nth-child(8)
-      flex: 1 1 20%
+        justify-content: flex-start
+    +media-width-max(480)
+      padding-left: 0
+  &:nth-child(9)
+    flex: 1 1 20%
+    justify-content: center
+    .manager-block
       justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
+      justify-content: flex-end
+      padding-right: 4%
       .manager-block
-        justify-content: center
-  .manager-item
-    &:nth-child(9)
-      flex: 1 1 20%
+        justify-content: flex-end
+    +media-width-max(480)
+      padding-right: 0
+  &:nth-child(10)
+    flex: 1 1 20%
+    justify-content: center
+    .manager-block
       justify-content: center
+    +media-width-max(768)
+      flex: 1 1 25%
+    +media-width-max(640)
+      flex: 1 1 50%
+      justify-content: flex-start
+      padding-left: 4%
       .manager-block
-        justify-content: center
-  .manager-item
-    &:nth-child(10)
-      flex: 1 1 20%
-      justify-content: center
-      .manager-block
-        justify-content: center
+        justify-content: flex-start
+    +media-width-max(480)
+      padding-left: 0

@@ -1,0 +1,169 @@
+@import "vars"
+@import "_mixins/helpers"
+
+.company-content-wrapper
+  margin-left: 8%
+  margin-right: 8%
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
+
+.company-top-container
+  margin-bottom: 35px
+  margin-left: 8%
+  margin-right: 8%
+  +clearfix
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
+
+.company-logo-container
+  float: left
+
+.company-content-wrapper
+  display: flex
+  +media-width-max(1024)
+  flex-wrap: wrap
+
+.company-aside
+  flex: 1 1 37%
+  +media-width-max(1024)
+    flex: 0 0 100%
+    display: flex
+  +media-width-max(640)
+    flex-wrap: wrap
+
+.company-info
+  flex: 1 1 63%
+  +media-width-max(1024)
+    flex: 0 0 100%
+
+.company-why-container, .company-how-container
+  margin-right: 20%
+  +media-width-max(1024)
+    width: 50%
+    margin-right: 6%
+  +media-width-max(640)
+    width: 100%
+    margin-left: 6%
+    margin-bottom: 40px
+  +media-width-max(480)
+    margin-right: 0
+    margin-left: 0
+
+.company-why-head, .company-how-head
+  position: relative
+  font-size: 13px
+  line-height: 3.2
+  text-transform: uppercase
+  color: $accent-color
+  &:after
+    content: ""
+    position: absolute
+    width: 91px
+    left: 0
+    bottom: -10px
+    border-bottom: 1px solid $accent-color
+
+.company-why-text, .company-how-text
+  display: block
+  padding-right: 15px
+  font-size: 21px
+  line-height: 2
+  color: $dark-color
+  +media-width-max(768)
+    padding-right: 0
+
+.company-why-container
+  margin-bottom: 70px
+  +media-width-max(640)
+    margin-bottom: 20px
+
+.company-info-block
+  position: relative
+  +clearfix
+
+.company-info-title
+  margin-bottom: 20px
+  font-family: $medium-font
+  font-size: 20px
+  text-transform: uppercase
+  line-height: 1.4
+  color: $dark-color
+
+.company-info-text
+  margin-bottom: 70px
+  font-family: $light-font
+  font-size: 14px
+  line-height: 2
+  color: $dark-color
+
+.company-advent-list
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 50px
+
+.company-advent-item
+  display: flex
+  width: 50%
+  margin-bottom: 40px
+  color: $dark-color
+  +media-width-max(480)
+  margin-left: 0
+  margin-right: 0
+  .advent-icon-container
+    flex: 0 0 40px
+    svg
+      +img
+      margin-top: 5px
+  .advent-text-container
+    padding: 0 25px 0 15px
+    +media-width-max(768)
+      padding-right: 0
+  .advent-title
+    margin: 0
+    font-family: $medium-font
+    font-size: 16px
+  .advent-text
+    margin: 0
+    font-family: $light-font
+    line-height: 1.75
+
+.company-products-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 50px
+
+.company-products-item
+  width: 17%
+  margin-bottom: 40px
+  text-align: center
+  .products-icon-container
+    height: 60px
+    margin-bottom: 10px
+    img
+      margin: 0 auto
+  .products-title
+    font-size: 14px
+    line-height: 2
+    color: $dark-color
+
+.company-dark
+  .company-why-container, .company-how-container
+    margin-right: 10%
+    +media-width-max(1024)
+      margin-right: 5%
+    +media-width-max(640)
+      margin-right: 0
+      margin-left: 0
+  .company-how-text, .company-why-text
+    margin-top: 5px
+  .company-aside
+    margin-bottom: 30px
+  .small-text
+    font-family: $light-font
+    font-size: 14px
+    color: $dirty-white-color
+  .company-info-title, .company-info-text
+    color: $white-color

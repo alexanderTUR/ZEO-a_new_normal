@@ -2,201 +2,163 @@
 @import "../_mixins/helpers"
 
 .kromtech-section
-  background-color: rgb(221, 222, 224)
+  position: relative
+  z-index: 10
+  background-color: $comp-bg-color
+  .backtotop-button
+    background-color: $gray-button-bg
+  .learn-more-wrapper
+    margin-bottom: 70px
+    text-align: center
+  .aggregator-container
+    margin: 0 8%
+    +media-width-max(1024)
+      margin-right: 2%
+      margin-left: 2%
+  .kromtech-advent
+    +media-width-max(1024)
+      width: 67%
+      margin-left: auto
+    +media-width-max(640)
+      width: 100%
+    .company-advent-item
+      +media-width-max(768)
+        width: 100%
+        margin-left: 6%
+        margin-right: 6%
+      +media-width-max(480)
+        margin-left: 0
+        margin-right: 0
+    .company-info-title
+      +media-width-max(640)
+        text-align: center
+  .kromtech-products
+    .company-products-item
+      +media-width-max(640)
+        width: 33%
+      +media-width-max(480)
+        width: 50%
+    .company-products-list
+      +media-width-max(640)
+        justify-content: center
+        margin-bottom: 0
 
 .kromtech-container
+  position: relative
   max-width: 1400px
   margin: 0 auto
   padding-top: 70px
-  position: relative
-  .backtotop-button
-    background-color: rgb(200, 200, 200)
-    margin-right: 120px
-  .learn-more-wrapper
-    text-align: center
-    margin-bottom: 70px
 
-.kromtech-top-container
-  @include clearfix
-  margin-bottom: 35px
-  
-.kromtech-logo-container
-  float: left
-  margin-left: 120px
+.kromtech-wrapper
+  padding-bottom: 70px
+  overflow: hidden
+  +media-width-max(640)
+    padding-bottom: 30px
 
-.kromtech-content-wrapper
-  display: flex
-
-.kromtech-aside
-  width: 480px
-
-.kromtech-info
-  width: 920px
-
-.kromtech-why-container, .kromtech-how-container
-  margin-left: 120px
-
-.kromtech-why-head, .kromtech-how-head
-  font-size: 13px
-  color: $accent-color
-  text-transform: uppercase
-  line-height: 3.2
-  position: relative
-  &:after
-    content: ""
-    position: absolute
-    left: 0
-    bottom: -10px
-    border-bottom: 1px solid $accent-color
-    width: 91px
-
-.kromtech-why-container
-  margin-bottom: 50px
-
-.kromtech-why-text, .kromtech-how-text
-  display: block
-  font-size: 21px
-  color: rgb(51, 51, 51)
-  line-height: 2
-  padding-right: 15px
-
-.kromtech-how-container
-  margin-bottom: 40px
-
-.kromtech-aside-img-container
-  padding-left: 60px
-  img
-    display: block
-    width: 100%
-    height: auto
-
-.kromtech-info
-  position: relative
-  padding: 0 120px 0 60px
+.kromtech-logo
+  width: 257px
+  height: 60px
 
 .kromtech-bg-robo
   position: absolute
-  width: 349px
+  width: 47%
   top: -90px
-  left: -120px
+  left: -25%
   img
-    width: 100%
-    height: auto
-    display: block
+    +img
+  +media-width-max(1024)
+    width: 30%
+    left: 50%
+    transform: translateX(-50%)
+  +media-width-max(768)
+    width: 185px
+    top: -30px
+  +media-width-max(640)
+    top: 0
 
-.kromtech-research-title, .kromtech-approach-title, .kromtech-security-title, .kromtech-partners-title
-  font-size: 20px
-  font-family: $medium-font
-  color: rgb(51, 51, 51)
-  text-transform: uppercase
-  line-height: 1.4
-  margin: 0
-  font-weight: normal
-
-.kromtech-research-text, .approach-text, .kromtech-security-text, .kromtech-partners-text
-  font-family: $light-font
-  font-size: 14px
-  line-height: 2
-  color: rgb(51, 51, 51)
-
-.kromtech-security-text, .kromtech-partners-text
-  margin-bottom: 60px
-  margin-top: 20px
-
-.kromtech-research-container
-  padding-top: 10px
-
-.kromtech-research-title
-  margin-bottom: 20px
-
-.kromtech-research-text
-  margin-bottom: 60px
-
-.kromtech-approach-list
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: 50px
-  .kromtech-approach-item
-    width: 50%
-
-.approach-icon-container
-  svg
-    width: 40px
-    height: 52px
-    margin-top: 5px
-
-.kromtech-approach-item
-  display: flex
-  margin-bottom: 40px
-
-.kromtech-approach-title
-  margin-bottom: 35px
-
-.approach-title
-  margin: 0
-  font-size: 16px
-  font-family: $medium-font
-  font-weight: normal
-
-.approach-text-container
-  padding: 0 25px 0 15px
-
-.approach-text
-  margin: 0
-
-.kromtech-security-list
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  margin-bottom: 50px
-
-.kromtech-security-item
-  text-align: center
-  width: 17%
-  margin-bottom: 40px
-  .security-item-icon
-    height: 60px
-    margin-bottom: 10px
-    img
-      display: block
-      margin: 0 auto
-
-.security-item-nam
-  font-size: 14px
-  color: rgb(51, 51, 51)
-  line-height: 2
+.kromtech-robo-container
+  position: absolute
+  z-index: -1
+  left: -62%
+  top: 100px
+  img
+    +img
+  +media-width-max(1376)
+    left: -70%
+  +media-width-max(1024)
+    width: 330px
+    top: 0
+    left: -55%
+  +media-width-max(768)
+    width: 300px
+    top: 70px
+    left: -70%
+  +media-width-max(640)
+    position: relative
+    left: 50%
+    top: 0
+    margin-bottom: 40px
+    transform: translateX(-50%)
 
 .kromtech-partners-list
   display: flex
   flex-wrap: wrap
-  padding: 0 120px
-
+  padding: 0
+  margin: 0 8%
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
 
 .kromtech-partners-item
-  min-width: 460px
   margin-bottom: 40px
+  &:nth-child(odd)
+    flex: 1 1 40%
+    +media-width-max(1376)
+      flex: 1 1 37%
+    +media-width-max(768)
+      flex: 1 1 50%
+    +media-width-max(610)
+      flex: 0 0 100%
+  &:nth-child(even)
+    flex: 1 1 60%
+    +media-width-max(1376)
+      flex: 1 1 63%
+    +media-width-max(768)
+      flex: 1 1 50%
+    +media-width-max(610)
+      flex: 0 0 100%
+  &:nth-child(1)
+    .partners-title
+      margin-bottom: 50px
+  &:nth-child(3)
+    .partners-title
+      margin-bottom: 25px
+  &:nth-child(4)
+    .partners-title
+      margin-bottom: 50px
+  .partners-logo-container
+    flex: 0 0 100%
+    img:not(:last-child)
+      margin-right: 3.7%
+    img
+      margin-bottom: 10px
   .partners-title
-    margin-bottom: 40px
+    flex: 0 0 100%
     position: relative
-    font-size: 20px
+    margin-bottom: 40px
     font-family: $medium-font
-    font-weight: normal
-    color: rgb(51, 51, 51)
+    font-size: 20px
     text-transform: uppercase
     line-height: 1.4
+    color: $dark-color
     &:after
       content: ""
-      border-bottom: 2px solid $accent-color
       position: absolute
       width: 255px
       left: 0
       bottom: -20px
+      border-bottom: 2px solid $accent-color
   &:nth-child(even)
     .partners-title
       &:after
         width: 295px
-  &:nth-child(2)
-    .partners-title
-      margin-bottom: 45px
-
-

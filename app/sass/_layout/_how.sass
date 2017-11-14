@@ -20,25 +20,13 @@
 .how-slider-wrapper
   position: relative
   margin-bottom: 70px
-  .slider-left-arrow, .slider-right-arrow
-    position: absolute
-    z-index: 10
-    box-sizing: content-box
-    width: 14px
-    height: 28px
-    top: 50%
-    padding: 10px
-    cursor: pointer
-    transform: translateY(-50%)
-    svg
-      +img
   .slider-left-arrow
     left: 40px
     +media-width-max(1024)
       left: 0
     +media-width-max(768)
       top: initial
-      bottom: 80px
+      bottom: 70px
       left: 4%
       transform: none
       .left-arrow
@@ -49,7 +37,7 @@
       right: 0
     +media-width-max(768)
       top: initial
-      bottom: 80px
+      bottom: 70px
       right: 4%
       transform: none
       .right-arrow

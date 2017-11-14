@@ -1,31 +1,43 @@
 @import "../vars"
+@import "../_mixins/helpers"
+
+.together-section
+  position: relative
+  z-index: 10
+  background-color: $white-color
 
 .together-container
   max-width: 1400px
   margin: 0 auto
-  padding: 90px 120px
-  border-bottom: 1px solid rgb(204, 204, 204)
+  padding: 90px 0 0
   .backtotop-button
-    background-color: rgb(246, 246, 246)
+    background-color: $gray-bg-color
+
+.together-wrapper
+  margin: 0 8%
+  padding-bottom: 30px
+  border-bottom: 1px solid $border-color
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
 
 .together-title
-  font-size: 36px
+  margin-bottom: 10px
   font-family: $bold-font
-  color: rgb(53, 53, 53)
+  font-size: 36px
   text-transform: uppercase
   text-align: center
+  color: $dark-color
 
 .partners-list
   display: flex
-  flex-wrap: nowrap
-  justify-content: center
+  flex-wrap: wrap
+  justify-content: space-around
   align-items: flex-end
   align-content: center
-  margin-top: 110px
+  margin-top: 100px
 
 .partners-item
+  margin: 0 20px 50px
   img
-    display: block
-
-.partners-item + .partners-item
-  margin-left: 50px
+    +img

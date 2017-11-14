@@ -2,98 +2,100 @@
 @import "../_mixins/helpers"
 
 .randd-section
-  background-color: rgb(228, 228, 228)
+  position: relative
+  z-index: 10
+  background-color: $randd-bg-color
+  .backtotop-button
+    margin-top: 60px
+    background-color: $gray-button-bg
   .learn-more-wrapper
+    border-bottom: 1px solid $border-color
+    padding-bottom: 80px
+    margin-bottom: 80px
+    margin-right: 8%
+    margin-left: 8%
     text-align: center
-    padding-bottom: 85px
-    margin-bottom: 65px
-    border-bottom: 1px solid rgb(204, 204, 204)
+    +media-width-max(1024)
+      margin-right: 2%
+      margin-left: 2%
+    +media-width-max(640)
+      margin-bottom: 0
+      border-bottom: none
+  .aggregator-container
+    margin: 0 8%
+    padding-bottom: 80px
+    +media-width-max(1024)
+      margin-right: 2%
+      margin-left: 2%
+    +media-width-max(768)
+      padding-bottom: 0
+  .youtube-container
+    &:nth-child(2)
+      +media-width-max(1376)
+        margin-bottom: 50px
+      +media-width-max(1024)
+        margin-bottom: 0
+  .company-advent-item
+    +media-width-max(768)
+      width: 100%
+    +media-width-max(480)
+      margin-right: 0
+      margin-left: 0
+  .company-info-text
+    +media-width-max(768)
+      margin-bottom: 0
+  .egg-text
+    +media-width-max(768)
+      float: right
+      width: calc(100% - 221px)
+    +media-width-max(480)
+      float: none
+      width: 100%
+  .company-why-container, .company-how-container
+    +media-width-max(640)
+      margin-right: 0
+      margin-left: 0
+
+
+.egg-features-container
+  .advent-title, .advent-text
+    color: $white-color
+
 
 .randd-container
   max-width: 1400px
   margin: 0 auto
-  .backtotop-button
-    margin-right: 0
-    margin-top: 60px
-    background-color: rgb(200, 200, 200)
 
-.randd-top-container
-  @include clearfix
-  padding: 80px 120px 0
-  margin-bottom: 30px
-
-.randd-why-container
-  margin-bottom: 20px
+.randd-wrapper
+  @extend .kromtech-wrapper
   
-.randd-logo-container
-  float: left
+.randd-logo
+  width: 102px
+  height: 102px
+  margin-top: 70px
   svg
-    display: block
-    width: 102px
-    height: 102px
-
-.randd-content-wrapper
-  display: flex
-  padding: 0 120px 60px
-
-.randd-aside
-  width: 480px
-
-.egg-info
-  width: 920px
-  padding-top: 30px
-  padding-left: 60px
-
-.randd-why-head, .randd-how-head
-  font-size: 13px
-  color: $accent-color
-  text-transform: uppercase
-  line-height: 3.2
-  position: relative
-  &:after
-    content: ""
-    position: absolute
-    left: 0
-    bottom: -10px
-    border-bottom: 1px solid $accent-color
-    width: 91px
-
-.randd-how-text, .randd-why-text
-  display: block
-  font-size: 21px
-  color: rgb(51, 51, 51)
-  line-height: 2
+    +img
 
 .egg-logo
   width: 176px
   height: 78px
+  margin-top: 50px
   margin-bottom: 30px
   img
-    display: block
-    width: 100%
-    height: auto
-
-.egg-title, .jammy-title
-  padding-right: 150px
-  font-size: 20px
-  font-family: $medium-font
-  color: rgb(51, 51, 51)
-  text-transform: uppercase
-  line-height: 1.4
-  margin: 0 0 20px 0
-  font-weight: normal
-
-.egg-text, .jammy-text
-  font-family: $light-font
-  font-size: 14px
-  line-height: 2
-  color: rgb(51, 51, 51)
+    +img
+  +media-width-max(1024)
+    float: left
+    margin-top: 0
+    margin-right: 6%
+  +media-width-max(480)
+    float: none
+    margin: 0 auto 20px
 
 .youtube-container
   position: relative
-  padding-bottom: 56.25%
-  height: 0
   overflow: hidden
+  height: 0
+  padding-bottom: 56.25%
   iframe, embed, object
     position: absolute
     top: 0
@@ -102,58 +104,44 @@
     height: 100%
 
 .egg-features-container
-  margin: 0 120px 60px
-  padding: 60px 120px
+  margin: 0 8%
+  padding: 50px 8% 0
   background-color: $accent-color
+  +media-width-max(1376)
+    margin-right: 2%
+    margin-left: 2%
+  +media-width-max(768)
+    padding-right: 12%
+    padding-left: 12%
+  +media-width-max(640)
+    margin-right: 0
+    margin-left: 0
+  .advent-text-container
+    color: $dark-color
 
 .egg-features-title
   margin: 0 0 30px 0
   font-size: 20px
   font-family: $medium-font
-  font-weight: normal
-  color: rgb(255, 255, 255)
+  color: $white-color
   text-transform: uppercase
   line-height: 1.4
   text-align: center
 
-.egg-features-wrapper
-  display: flex
-  justify-content: space-between
-
-.egg-feature
-  display: flex
-
-.egg-feature-icon
-  width: 50px
-  margin-top: 15px
-
-.egg-feature-info
-  width: 380px
-  padding-left: 20px
-
-.egg-feature-title
-  margin: 0
-  font-size: 16px
-  font-weight: normal
-  font-family: $medium-font
-  color: rgb(255, 255, 255)
-  line-height: 2.6
-
-.egg-feature-text
-  margin: 0
-  font-size: 14px
-  font-family: $light-font
-  color: rgb(255, 255, 255)
-  line-height: 2
-
 .egg-quote-container
-  border: 1px solid rgb(70, 70, 70)
-  margin: 0 350px 60px
+  border: 1px solid $quote-border-color
+  margin: 0 25% 60px
   padding: 55px 60px 45px
   text-align: right
   font-size: 21px
-  color: rgb(51, 51, 51)
+  color: $dark-color
   line-height: 1.7
+  +media-width-max(1024)
+    margin-right: 12%
+    margin-left: 12%
+  +media-width-max(768)
+    margin-right: 2%
+    margin-left: 2%
 
 .egg-quote-icon
   width: 41px
@@ -179,27 +167,59 @@
 .egg-partners-container
   padding-bottom: 80px
   margin-bottom: 80px
-  border-bottom: 1px solid rgb(204, 204, 204)
+  margin-right: 8%
+  margin-left: 8%
+  border-bottom: 1px solid $border-color
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
   img
-      display: block
-      margin: 0 auto
+    +img
 
 .jammy-info
   @include clearfix
-  padding: 0 120px
-  margin-bottom: 90px
+  margin-left: 8%
+  margin-right: 8%
+  +media-width-max(1024)
+    margin-right: 2%
+    margin-left: 2%
     
 .jammy-logo
   float: left
-  margin-right: 60px
+  width: 112px
+  height: 79px
+  margin-right: 5%
   img
-    display: block
+    +img
+  +media-width-max(480)
+    float: none
+    margin: 0 auto 20px
 
 .jammy-container
   padding-top: 10px
+  color: $dark-color
+
+.jammy-title
+  font-size: 20px
+  font: $medium-font
+  text-transform: uppercase
+  line-height: 1.4
+
+.jammy-text
+  font: $light-font
+  font-size: 14px
+  line-height: 2.6
 
 .jammy-features-container
   padding-top: 55px
+  padding-right: 15%
+  padding-left: 15%
+  +media-width-max(1024)
+    padding-right: 10%
+    padding-left: 10%
+  +media-width-max(768)
+    padding-right: 4%
+    padding-left: 4%
 
 .jammy-features-title
   margin: 0 0 40px 0
@@ -211,51 +231,19 @@
   text-align: center
   font-weight: normal
 
-.jammy-features-wrapper
-  display: flex
-  flex-wrap: wrap
-  //justify-content: space-around
-  justify-content: center
-
-.jammy-feature
-  display: flex
-  position: relative
-  left: 50px
-  width: 480px
-  margin-bottom: 50px
-
-.jammy-feature-icon
-  width: 50px
-  margin-top: 13px
-
-.jammy-feature-info
-  width: 350px
-  padding-left: 35px
-
-.jammy-feature-title
-  margin: 0
-  font-size: 16px
-  font-family: $medium-font
-  color: rgb(51, 51, 51)
-  line-height: 2.6
-  font-weight: normal
-
-.jammy-feature-text
-  font-size: 14px
-  font-family: $light-font
-  color: rgb(51, 51, 51)
-  line-height: 2
-
 .indiegogo-banner
   width: 100%
   margin-bottom: 100px
   img
-    display: block
-    width: 100%
-    height: auto
+    +img
 
 .jammy-partners-container
+  width: 100%
   margin-bottom: 90px
+  padding-right: 8%
+  padding-left: 8%
+  +media-width-max(1024)
+    padding-right: 2%
+    padding-left: 2%
   img
-    display: block
-    margin: 0 auto
+    +img
