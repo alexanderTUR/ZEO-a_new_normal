@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "page-scroll-to-id": "^1.5.8",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "waypoints": "^4.0.1"
   }
 }

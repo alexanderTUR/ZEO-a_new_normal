@@ -6,12 +6,16 @@
   z-index: 10
   background-color: $white-color
   .backtotop-button
-    margin-top: 70px
+    margin-top: $big-sp
+    +media-width-max(500)
+      margin-top: 0
   .company-info-text
     margin-bottom: 40px
+    &:nth-child(3)
+      margin-bottom: 65px
   .learn-more-wrapper
     width: 100%
-    margin-bottom: 60px
+    margin-bottom: $big-sp
     text-align: center
   .company-why-container
     +media-width-max(1024)
@@ -53,12 +57,13 @@
 .zoom-logo
   width: 291px
   height: 76px
-  margin-top: 60px
+  margin-top: $big-sp
   svg
     +img
 
 .zoom-features-container
   .company-advent-list
+    margin-bottom: 20px
     justify-content: center
   .company-advent-item
     width: 40%
@@ -70,7 +75,7 @@
 .zoom-customers-wrapper
   position: relative
   width: 100%
-  margin-bottom: 50px
+  margin-bottom: $big-sp
   .customers-list
     +media-width-max(1024)
       padding-right: 60px
@@ -87,7 +92,7 @@
     +media-width-max(1024)
       right: 0
   .company-info-title
-    margin-bottom: 40px
+    margin-bottom: $small-sp
     +media-width-max(768)
       text-align: center
   .customers-head

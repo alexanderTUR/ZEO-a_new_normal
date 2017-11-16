@@ -8,7 +8,7 @@
   .backtotop-button
     background-color: $gray-button-bg
   .learn-more-wrapper
-    margin-bottom: 70px
+    margin-bottom: 80px
     text-align: center
   .aggregator-container
     margin: 0 8%
@@ -32,6 +32,8 @@
     .company-info-title
       +media-width-max(640)
         text-align: center
+    .company-info-title
+      margin-bottom: 45px
   .kromtech-products
     .company-products-item
       +media-width-max(640)
@@ -47,10 +49,10 @@
   position: relative
   max-width: 1400px
   margin: 0 auto
-  padding-top: 70px
+  padding-top: $big-sp
 
 .kromtech-wrapper
-  padding-bottom: 70px
+  padding-bottom: $big-sp
   overflow: hidden
   +media-width-max(640)
     padding-bottom: 30px
@@ -119,7 +121,7 @@
   &:hover>.products-icon-container
     +scale-in(1.2)
 .kromtech-partners-item
-  margin-bottom: 40px
+  margin-bottom: 30px
   &:nth-child(odd)
     flex: 1 1 40%
     +media-width-max(1376)

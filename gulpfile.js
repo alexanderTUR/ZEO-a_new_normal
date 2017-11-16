@@ -26,10 +26,11 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/slick/slick.min.js',
 		'app/libs/pagescroll/jquery.malihu.PageScroll2id.js',
 		'app/libs/tubular/jquery.tubular.1.0.js',
+		'app/libs/waypoint/jquery.waypoints.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Минимизировать весь js
+	.pipe(uglify()) // Минимизировать весь js
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });

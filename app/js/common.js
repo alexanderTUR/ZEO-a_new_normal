@@ -186,25 +186,6 @@ $(function() {
 			}]
 	});
 
-	// $('#blog-news').slick({
-	// 	slidesToShow: 2,
-	// 	slidesToScroll: 1,
-	// 	dots: true,
-	// 	prevArrow: false,
-	// 	nextArrow: $('#blog-news-next'),
-	// 	dotsClass: 'aggregator-counter',
-	// 	appendDots: $('#blog-news-controls'),
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 769,
-	// 			settings: {
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 				prevArrow: $('#blog-left-arrow'),
-	// 				nextArrow: $('#blog-right-arrow')
-	// 			}
-	// 		}]
-	// });
 
 	$('a[rel="pageScroll"]').mPageScroll2id({
 		clickedClass: 'scroll-clicked',
@@ -215,12 +196,46 @@ $(function() {
 		}
 	});
 
-	// $('#header_bg').tubular({
-	// 	videoId: '8Sj-2LnG5Xk',
-	// 	start: 18,
-	// 	end: 25,
-	// 	mute: true,
-	// 	repeat: true
-	// });
-
 });
+
+// Youtube pause on scroll
+
+var player1;
+var player2;
+
+function onYouTubePlayerAPIReady() {
+	player1 = new YT.Player('player1', {
+		events: {'onReady': onPlayerReady1}
+	});
+	player2 = new YT.Player('player2', {
+		events: {'onReady': onPlayerReady2}
+	});
+}
+function onPlayerReady1(event) {
+	waypointYoutube1();
+}
+
+function onPlayerReady2(event) {
+	waypointYoutube2();
+}
+
+
+function waypointYoutube1() {
+	$('#player1').waypoint(function() {
+		player1.pauseVideo();
+	}, {
+		offset: function() {
+			return -this.element.clientHeight
+		}
+	});
+}
+
+function waypointYoutube2() {
+	$('#player2').waypoint(function() {
+		player2.pauseVideo();
+	}, {
+		offset: function() {
+			return -this.element.clientHeight
+		}
+	});
+}

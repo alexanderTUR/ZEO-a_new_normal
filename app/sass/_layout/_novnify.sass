@@ -7,12 +7,11 @@
   background-color: $dark-bg-color
   .backtotop-button
     background-color: $dark-button-bg
-    margin-bottom: 50px
     .section-name
       color: $dirty-white-color
   .learn-more-wrapper
     text-align: center
-    padding-bottom: 50px
+    padding-bottom: $big-sp
   .aggregator-container
     margin-left: 8%
     margin-right: 8%
@@ -29,10 +28,14 @@
     +media-width-max(1024)
       padding-left: 0
       padding-right: 0
+  .company-info-text
+    margin-bottom: $medium-sp
+  .company-why-container
+    margin-bottom: $medium-sp
 
 .novnify-container
   @extend .kromtech-container
-  padding-bottom: 70px
+  padding-bottom: $big-sp
 
 .novnify-logo-container
   float: left
@@ -101,7 +104,7 @@
   display: flex
   justify-content: space-around
   text-align: center
-  margin-bottom: 80px
+  margin-bottom: $normal-sp
   margin-left: 8%
   margin-right: 8%
   +media-width-max(1024)
