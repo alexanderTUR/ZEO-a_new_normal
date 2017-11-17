@@ -22,6 +22,10 @@
       .backtotop-1
         fill: $accent-hover-color
         transition: fill .2s ease-out
+    &:active
+      .backtotop-1
+        fill: $accent-active-color
+        transition: fill .2s ease-out
   svg
     width: 58px
     height: 41px
@@ -29,6 +33,13 @@
 .learn-more-button
   display: inline-block
   background-color: $accent-color
+  transition: background .2s ease-in
+  &:hover
+    background-color: $accent-hover-color
+    transition: background .2s ease-out
+  &:active
+    background-color: $accent-active-color
+    transition: background .2s ease-out
   .learn-more-link
     display: block
     width: 100%
@@ -45,7 +56,7 @@
     height: 9px
     margin-left: 14px
 
-.aggregator-next-button
+.aggregator-next-button, .aggregator-prev-button
   display: flex
   justify-content: center
   align-items: center
@@ -57,16 +68,44 @@
   &:hover
     background-color: $accent-hover-color
     transition: background .2s ease-in
-  .aggregator-next-text
+  &:active
+    background-color: $accent-active-color
+    transition: background .2s ease-in
+  .aggregator-next-text, .aggregator-prev-text
     font-family: $medium-font
     font-size: 13px
     text-transform: uppercase
     letter-spacing: 2px
     color: $white-color
+
+.slick-disabled
+  cursor: auto
+  pointer-events: none
+  transition: background .2s ease-out
+  background-color: $disabled-color
+  color: $dark-color
+  &:hover, &:active
+    background-color: $disabled-color
+  .aggregator-next-text, .aggregator-prev-text
+    color: $dark-color
+    transition: color .5s ease-out
+  .learn-more
+    stroke: $dark-color
+    transition: stroke .2s ease-out
+
+.aggregator-next-button
   svg
     width: 10px
     height: 9px
     margin-left: 7px
+
+.aggregator-prev-button
+  order: 1
+  svg
+    width: 10px
+    height: 9px
+    margin-right: 7px
+    transform: rotate(180deg)
 
 .slider-left-arrow, .slider-right-arrow
   position: absolute
@@ -75,11 +114,16 @@
   width: 14px
   height: 28px
   top: 50%
-  padding: 30px 10px
+  padding: 16px 23px
   cursor: pointer
   transform: translateY(-50%)
+  transition: background .2s ease-in
   svg
     +scale-out(1)
     +img
-  &:hover>svg
-    +scale-in(1.4)
+  &:hover
+    background: $arrow-hover-color
+    transition: background .2s ease-out
+    //+scale-in(1.4)
+  &:active>svg
+    +scale-in(1.3)

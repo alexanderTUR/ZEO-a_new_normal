@@ -30,7 +30,7 @@
       left: 4%
       transform: none
       .left-arrow
-        stroke: #fff
+        stroke: $white-color
   .slider-right-arrow
     right: 40px
     +media-width-max(1024)
@@ -42,7 +42,7 @@
       transform: none
       .right-arrow
         top: initial
-        stroke: #fff
+        stroke: $white-color
         transform: none
 
 .how-slider-container
@@ -88,14 +88,15 @@
       .slide-title
         margin: 0 0 10px 0
         font-family: $bold-font
-        font-size: 21px
+        font-size: 20px
         font-weight: normal
         line-height: 1.8
         text-transform: uppercase
         color: $dirty-white-color
       .slide-subtitle
-        font-family: $light-font
         color: $dirty-white-color
+        font-size: 18px
+        line-height: 2
     .slide-counter-container
       position: absolute
       display: flex
