@@ -25,8 +25,13 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/jquery.min.js',
 		'app/libs/slick/slick.min.js',
 		'app/libs/pagescroll/jquery.malihu.PageScroll2id.js',
-		'app/libs/tubular/jquery.tubular.1.0.js',
+		// 'app/libs/tubular/jquery.tubular.1.0.js',
 		'app/libs/waypoint/jquery.waypoints.min.js',
+		'app/libs/parallax/parallax.min.js',
+		'app/libs/greensock/TweenLite.min.js',
+		'app/libs/greensock/TimelineLite.min.js',
+		'app/libs/greensock/plugins/CSSPlugin.min.js',
+		'app/libs/greensock/easing/EasePack.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

@@ -1,7 +1,15 @@
 $(function() {
 
-	$('#top').fadeIn();
+	// Loader hide
+	$('body').addClass('loaded');
 
+	// Parallax init
+	$('#header_bg').parallax({
+		imageSrc: 'img/header_bg.jpg',
+		zIndex: 1
+	});
+
+	// Menu functions
 	var $burgerIcon = $('.burger-icon');
 	var $menuList = $('.main-menu-list');
 
@@ -21,6 +29,7 @@ $(function() {
 		}
 	}
 
+	// Sliders init
 	$('#how-slider').slick({
 		prevArrow: $('#how-left-arrow'),
 		nextArrow: $('#how-right-arrow'),
@@ -189,7 +198,7 @@ $(function() {
 			}]
 	});
 
-
+	// Page scroll init
 	$('a[rel="pageScroll"]').mPageScroll2id({
 		clickedClass: 'scroll-clicked',
 		targetClass: 'scroll-target',
@@ -199,10 +208,84 @@ $(function() {
 		}
 	});
 
+	// Header animation
+	var $header = $('.header-top');
+	var $mainTitle = $('.header-title');
+	var headerTimeLine = new TimelineLite();
+
+	headerTimeLine.from($header, 1.5, {y: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '+=0.5')
+			.from($mainTitle, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=0.5');
+
+	// Waypoint+AnimateCSS functions
+	(function($) {
+		$.fn.animated = function(inEffect, oSet) {
+			$(this).css("opacity", "0").addClass("animated");
+
+			$(this).waypoint(function(direction) {
+				if (direction === "down") {
+					$(this.element).addClass(inEffect).css("opacity", "1")
+				}
+			}, {
+				offset: oSet
+			});
+		};
+	})(jQuery);
+
+	$('.why-container').animated('fadeIn', '80%');
+	$('.backtotop-button').animated('fadeInRight', '80%');
+	$('.why-text').animated('fadeIn', '80%');
+	$('.how-title').animated('fadeIn', '80%');
+	$('.how-slider-wrapper').animated('fadeIn', '80%');
+	$('.how-text-wrap').animated('fadeIn', '80%');
+	$('.learn-more-button').animated('fadeInUp', '80%');
+	$('.zeo-university-img-container').animated('fadeIn', '80%');
+	$('.zeo-university-header').animated('fadeIn', '80%');
+	$('.zeo-university-text').animated('fadeIn', '80%');
+	$('.company-logo-container').animated('fadeInLeft', '80%');
+	$('.company-aside').animated('fadeInLeft', '80%');
+	$('.company-info-title').animated('fadeIn', '80%');
+	$('.company-info-text').animated('fadeIn', '80%');
+	$('.company-advent-item').animated('fadeIn', '80%');
+	$('.kromtech-robo-container').animated('fadeIn', '80%');
+	$('.kromtech-bg-robo').animated('fadeIn', '80%');
+	$('.company-products-list').animated('fadeIn', '80%');
+	$('.kromtech-partners-item').animated('fadeIn', '80%');
+	$('.aggregator-container').animated('fadeIn', '80%');
+	$('.onset-img-container').animated('fadeIn', '80%');
+	$('.onset-advent-list').animated('fadeIn', '80%');
+	$('.egg-logo').animated('fadeIn', '80%');
+	$('.youtube-container').animated('fadeIn', '80%');
+	$('.egg-features-container').animated('fadeIn', '80%');
+	$('.egg-quote-container').animated('fadeIn', '80%');
+	$('.egg-partners-container').animated('fadeIn', '80%');
+	$('.jammy-info').animated('fadeIn', '80%');
+	$('.jammy-features-title').animated('fadeIn', '80%');
+	$('.indiegogo-banner').animated('zoomIn', '80%');
+	$('.jammy-partners-container').animated('fadeIn', '80%');
+	$('.novnify-key-container').animated('fadeIn', '80%');
+	$('.novnify-circles-container').animated('fadeIn', '80%');
+	$('.zoom-img-container').animated('fadeIn', '80%');
+	$('.zoom-customers-wrapper').animated('fadeIn', '80%');
+	$('.about-title').animated('fadeIn', '80%');
+	$('.about-subtitle').animated('fadeIn', '80%');
+	$('.story-year').animated('fadeIn', '80%');
+	$('.story-sep-circle').animated('zoomIn', '80%');
+	$('.story-text').animated('fadeIn', '80%');
+	$('.management-title').animated('fadeIn', '80%');
+	$('.manager-item').animated('fadeIn', '80%');
+	$('.together-title').animated('fadeIn', '80%');
+	$('.partners-list').animated('fadeIn', '80%');
+	$('.join-title').animated('fadeIn', '80%');
+	$('.join-text').animated('fadeIn', '80%');
+	$('.join-slider-wrapper').animated('fadeIn', '80%');
+	$('.contact-title').animated('fadeIn', '80%');
+	$('.contact-list').animated('fadeIn', '80%');
+	$('.contact-social-list').animated('fadeInUp', '80%');
+	$('.footer-container').animated('fadeIn', '80%');
+
 });
 
 // Youtube pause on scroll
-
 var player1;
 var player2;
 
