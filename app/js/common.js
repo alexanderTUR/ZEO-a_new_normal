@@ -5,7 +5,6 @@ $(function() {
 
 	// Parallax init
 	$('#header_bg').parallax({
-		imageSrc: 'img/header_bg.jpg',
 		zIndex: 1
 	});
 
@@ -260,7 +259,7 @@ $(function() {
 	$('.egg-partners-container').animated('fadeIn', '80%');
 	$('.jammy-info').animated('fadeIn', '80%');
 	$('.jammy-features-title').animated('fadeIn', '80%');
-	$('.indiegogo-banner').animated('zoomIn', '80%');
+	$('.indiegogo-banner').animated('fadeIn', '80%');
 	$('.jammy-partners-container').animated('fadeIn', '80%');
 	$('.novnify-key-container').animated('fadeIn', '80%');
 	$('.novnify-circles-container').animated('fadeIn', '80%');
