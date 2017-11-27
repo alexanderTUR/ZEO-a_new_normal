@@ -6,11 +6,15 @@
   max-width: 1400px
   margin: 0 auto
   padding-bottom: 85px
+  .backtotop-button
+    position: absolute
+    right: 0
+    z-index: 10
 
 .how-title
   margin-bottom: 70px
   padding: 190px 10% 0
-  font-family: $bold-font
+  +bold-font
   font-size: 28px
   text-align: center
   text-transform: uppercase
@@ -87,9 +91,8 @@
         padding-right: 40px
       .slide-title
         margin: 0 0 10px 0
-        font-family: $bold-font
+        +bold-font
         font-size: 20px
-        font-weight: normal
         line-height: 1.8
         text-transform: uppercase
         color: $dirty-white-color
@@ -115,14 +118,14 @@
       .counter
         margin: auto
         font-size: 20px
-        font-family: $light-font
+        +light-font
         letter-spacing: 5px
         color: $dirty-white-color
 
 .how-text
   margin: 0
   padding: 0 8%
-  font-family: $light-font
+  +light-font
   font-size: 16px
   line-height: 2
   color: $dark-color

@@ -1,7 +1,7 @@
 $(function() {
 
 	// Loader hide
-	$('body').addClass('loaded');
+	setTimeout(function(){$('body').addClass('loaded');}, 1000);
 
 	// Parallax init
 	$('#header_bg').parallax({
@@ -32,7 +32,8 @@ $(function() {
 	$('#how-slider').slick({
 		prevArrow: $('#how-left-arrow'),
 		nextArrow: $('#how-right-arrow'),
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		// lazyLoad: 'ondemand'
 	});
 
 	$('#join-slider').slick({
