@@ -32,8 +32,7 @@ $(function() {
 	$('#how-slider').slick({
 		prevArrow: $('#how-left-arrow'),
 		nextArrow: $('#how-right-arrow'),
-		adaptiveHeight: true,
-		// lazyLoad: 'ondemand'
+		lazyLoad: 'progressive'
 	});
 
 	$('#join-slider').slick({
@@ -198,15 +197,72 @@ $(function() {
 			}]
 	});
 
-	// Page scroll init
-	$('a[rel="pageScroll"]').mPageScroll2id({
-		clickedClass: 'scroll-clicked',
-		targetClass: 'scroll-target',
-		highlightClass: 'scroll-highlight',
-		onStart:function(){
-			menuClose();
-		}
+	$('#allNewsSlider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		infinite: false,
+		slidesPerRow: 4,
+		rows: 10,
+		adaptiveHeight: true,
+		prevArrow: $('#all-news-prew'),
+		nextArrow: $('#all-news-next'),
+		dotsClass: 'aggregator-counter',
+		appendDots: $('#all-news-controls'),
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesPerRow: 3,
+					rows: 12
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesPerRow: 2,
+					rows: 15
+				}
+
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					slidesPerRow: 1,
+					rows: 20
+				}
+			}]
 	});
+
+	pageScroll();
+	// Page scroll animation function
+	function pageScroll() {
+		var pageScrollCtrl = new ScrollMagic.Controller({
+			// addIndicators: true,
+			globalSceneOptions: {
+				triggerHook: 0
+			}
+		});
+
+		pageScrollCtrl.scrollTo(function (newpos) {
+			TweenLite.to(window, 1, {scrollTo: {y: newpos}, ease:Power1.easeInOut});
+		});
+
+		$(document).on("click", "a[rel='pageScroll']", function (e) {
+			var id = $(this).attr("href");
+			if ($(id).length > 0) {
+				e.preventDefault();
+				// trigger scroll
+				pageScrollCtrl.scrollTo(id);
+				// if supported by the browser we can even update the URL.
+				if (window.history && window.history.pushState) {
+					history.pushState("", document.title, id);
+				}
+			}
+			// close menu on click
+			menuClose();
+		});
+	}
 
 	// Header animation
 	var $header = $('.header-top');

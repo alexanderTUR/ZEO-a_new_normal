@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ZEO</title>
+    <meta name="description" content="ZEO Alliance is a technology driven company creating products and experiences that positively impact the world.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta property="og:image" content="path/to/image.jpg">-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#666">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#666">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body id="allNews">
+    <!--Loader bgn-->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--Loader end-->
+    <!--Header bgn-->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="header-logo-container">
+                    <div class="logo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.01 33.03"><defs><style>.main-logo{fill:#ff5608;}</style></defs><title>Ресурс 38</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="main-logo" d="M16.7,21.76H8.46a.38.38,0,0,1-.29-.62s8.2-8.58,9-9.47a3,3,0,0,0-2.29-5H.38a.37.37,0,0,0-.27.12A.38.38,0,0,0,0,7.11a9,9,0,0,0,1.25,3.75.75.75,0,0,0,.65.36H9.85a.38.38,0,0,1,.29.62S2,20.47,1.27,21.37a3,3,0,0,0,2.31,5H18.21a.38.38,0,0,0,.38-.39v0a9.19,9.19,0,0,0-1.24-3.8A.75.75,0,0,0,16.7,21.76Z"/><path class="main-logo" d="M29.9,28.89A14.88,14.88,0,0,1,23.53,19h2.26a.38.38,0,0,0,.37-.29,10.88,10.88,0,0,0,0-4.43.38.38,0,0,0-.37-.29H23.53A14.88,14.88,0,0,1,29.9,4.13a.51.51,0,0,0,.21-.52A8.17,8.17,0,0,0,27.88.09a.53.53,0,0,0-.57,0,19.74,19.74,0,0,0,0,32.86.53.53,0,0,0,.57,0,8.15,8.15,0,0,0,2.24-3.51A.52.52,0,0,0,29.9,28.89Z"/><path class="main-logo" d="M18.49,26.2a.38.38,0,0,1-.28.13H3.58a3,3,0,0,1-2.31-5c.75-.9,8.86-9.53,8.86-9.53a.38.38,0,0,0-.29-.62H1.9a.75.75,0,0,1-.65-.36A9,9,0,0,1,0,7.11a.38.38,0,0,1,.1-.29A.37.37,0,0,1,.37,6.7H14.85a3,3,0,0,1,2.29,5c-.76.9-9,9.47-9,9.47a.38.38,0,0,0,.29.62H16.7a.75.75,0,0,1,.64.36,9.19,9.19,0,0,1,1.24,3.79A.37.37,0,0,1,18.49,26.2Z"/><path class="main-logo" d="M27.88,32.93a.53.53,0,0,1-.57,0,19.74,19.74,0,0,1,0-32.85.53.53,0,0,1,.57,0A8.22,8.22,0,0,1,30.11,3.6a.51.51,0,0,1-.21.52A14.88,14.88,0,0,0,23.53,14h2.26a.38.38,0,0,1,.37.29,10.88,10.88,0,0,1,0,4.43.38.38,0,0,1-.37.29H23.53a14.88,14.88,0,0,0,6.38,9.88.52.52,0,0,1,.21.52A8.17,8.17,0,0,1,27.88,32.93Z"/><path class="main-logo" d="M38.42,5.92A10.59,10.59,0,1,0,49,16.51h0A10.59,10.59,0,0,0,38.42,5.92Zm0,16.44a5.85,5.85,0,1,1,5.85-5.85h0A5.86,5.86,0,0,1,38.42,22.36Z"/></g></g></svg>
+                    </div>
+                </div>
+                <div class="header-burger">
+                    <div class="burger-icon"></div>
+                </div>
+                <ul class="main-menu-list">
+                    <li class="menu-item">
+                        <a href="index.html#why" class="menu-link">why?</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">how?</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">what?</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">about us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">together</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="index.html#news" class="menu-link">news</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">join us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">contacts</a>
+                    </li>
+                </ul>
+                <ul class="header-social-list">
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/ZEOAlliance/" target="_blank" rel="noopener" class="social-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.21 17.5"><defs><style>.facebook{fill:none;stroke:#e6e6e6;stroke-miterlimit:10;}</style></defs><title>Ресурс 25</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="facebook" d="M7,.84A3.5,3.5,0,0,0,2,4V17.5"/><line class="facebook" y1="8.5" x2="5" y2="8.5"/></g></g></svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/company/5022190/" target="_blank" rel="noopener" class="social-linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.39 16"><defs><style>.linkedin{fill:none;stroke:#e6e6e6;stroke-miterlimit:10;}</style></defs><title>Ресурс 26</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><circle class="linkedin" cx="1.61" cy="1.61" r="1.11" transform="translate(-0.67 1.61) rotate(-45)"/><line class="linkedin" x1="1.61" y1="6.04" x2="1.61" y2="16"/><line class="linkedin" x1="8.25" y1="6.04" x2="8.25" y2="16"/><path class="linkedin" d="M14.89,16V9.61A3.57,3.57,0,0,0,12.84,6.3,3.2,3.2,0,0,0,11.57,6,4.85,4.85,0,0,0,8.25,7.14"/></g></g></svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.youtube.com/channel/UCpogRsMZh_fCiPw6R_D1jqQ/videos" target="_blank" rel="noopener" class="social-youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 16.54"><defs><style>.youtube{fill:none;stroke:#e6e6e6;stroke-miterlimit:10;}</style></defs><title>Ресурс 27</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="youtube" d="M16.07,15.77l-1,.08a56.39,56.39,0,0,1-10.16-.08h0A4.44,4.44,0,0,1,.5,11.35V5.2a4.51,4.51,0,0,1,4-4.38l.46,0A56.39,56.39,0,0,1,15.08.69l1,.08A4.44,4.44,0,0,1,20.5,5.2v6.15A4.44,4.44,0,0,1,16.07,15.77Z"/><polygon class="youtube" points="14.18 8.27 8.98 5.27 8.98 11.27 14.18 8.27"/></g></g></svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/zeoalliance/" target="_blank" rel="noopener" class="social-instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.instagram{fill:none;stroke:#e6e6e6;stroke-miterlimit:10;}</style></defs><title>Ресурс 28</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><rect class="instagram" x="0.5" y="0.5" width="15" height="15" rx="2.89" ry="2.89"/><circle class="instagram" cx="7.99" cy="8" r="3.38"/><circle class="instagram" cx="12.53" cy="3.79" r="1" transform="translate(0.99 9.97) rotate(-45)"/></g></g></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--Header end-->
+    <!--Filter and thumbnails bgn-->
+    <div class="all-news-container">
+        <h1 class="all-news-main-title">Latest news</h1>
+        <div class="filter-container">
+            <h6 class="filter-title">filter tags</h6>
+            <ul class="filter-button-list">
+                <li class="filter-button">kromtech</li>
+                <li class="filter-button">novnify</li>
+                <li class="filter-button">rnd 64</li>
+                <li class="filter-button">onset game</li>
+                <li class="filter-button">zoom support</li>
+                <li class="filter-button">all news</li>
+            </ul>
+            <ul class="news-thumbnail-list" id="allNewsSlider">
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">1 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">2 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">3 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">4 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">5 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">6 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">7 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">8 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">9 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">10 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">11 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">12 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">13 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">14 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">15 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">16 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">17 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">18 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">19 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">20 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">21 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">22 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">23 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">24 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">25 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">26 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">27 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">28 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">29 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">30 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">31 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">32 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">33 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">34 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">35 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">36 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">37 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">38 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">39 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">40 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">41 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">42 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">43 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">44 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">45 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">46 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">47 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">48 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">49 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">50 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">51 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">52 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">53 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">54 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">55 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">56 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">57 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">58 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">59 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+                <li class="news-thumbnail-item">
+                    <a href="#" class="thumbnail-link">
+                        <div class="thumbnail-image-container">
+                            <img src="img/empty.jpg">
+                        </div>
+                        <h6 class="thumbnail-title">60 - Massive Leaks prevented by Kromtech specialists</h6>
+                    </a>
+                </li>
+            </ul>
+            <div class="aggregator-control-container" id="all-news-controls">
+                <div class="aggregator-prev-button" id="all-news-prew">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.68 8.66"><defs><style>.learn-more{fill:none;stroke:#fff;stroke-miterlimit:10;}</style></defs><title>Ресурс 39</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polyline class="learn-more" points="7 8.3 10.97 4.33 7 0.35"/><line class="learn-more" x1="6" y1="4.3" y2="4.3"/></g></g></svg>
+                    <span class="aggregator-next-text">Prev</span>
+                </div>
+                <div class="aggregator-next-button" id="all-news-next">
+                    <span class="aggregator-prev-text">Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.68 8.66"><defs><style>.learn-more{fill:none;stroke:#fff;stroke-miterlimit:10;}</style></defs><title>Ресурс 39</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polyline class="learn-more" points="7 8.3 10.97 4.33 7 0.35"/><line class="learn-more" x1="6" y1="4.3" y2="4.3"/></g></g></svg>
+                </div>
+            </div>
+            <!--<div class="all-thumbnail-button-wrapper">-->
+                <!--<div class="see-all-button">-->
+                    <!--<a href="#" class="see-all-link">see all<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.68 8.66"><defs><style>.see-all{fill:none;stroke:#fff;stroke-miterlimit:10;}</style></defs><title>Ресурс 39</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polyline class="see-all" points="7 8.3 10.97 4.33 7 0.35"/><line class="see-all" x1="6" y1="4.3" y2="4.3"/></g></g></svg></a>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--Filter and thumbnails end-->
+
+    //= parts/_footer.html
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

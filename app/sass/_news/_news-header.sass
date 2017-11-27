@@ -1,0 +1,21 @@
+@import "../vars"
+@import "../_mixins/helpers"
+
+#news, #allNews
+  .header
+    height: auto
+    padding-bottom: 0
+    background-color: $news-header-bg
+    +media-width-max(768)
+      min-height: initial
+  .header-container
+    padding: 0 4%
+    +section-container
+    +media-width-max(1024)
+      padding-right: 2%
+      padding-left: 2%
+  .header-top
+    border-bottom: none
+    +media-width-max(768)
+      padding-right: 0
+      padding-left: 0
