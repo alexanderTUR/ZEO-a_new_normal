@@ -129,7 +129,6 @@
   img
     +img
 
-
 .circle-text
   font-size: 18px
   line-height: 1.9
@@ -137,10 +136,20 @@
 .novnify-container
   .aggregator-control-container
     .aggregator-counter
+      button
+        &:hover, &:active
+          color: $white-color
+          background-color: $dark-disabled-bg
       .slick-active
         button
-          color: rgb(102, 102, 102)
+          color: $counter-color
+  .slick-disabled
+    background-color: $dark-disabled-bg
+    .aggregator-next-text
+      color: $counter-color
+    .learn-more
+      stroke: $counter-color
 
 .novnify-container
   .aggregator-title, .aggregator-item-date, .aggregator-item-link
-    color: rgb(255, 255, 255)
+    color: $white-color

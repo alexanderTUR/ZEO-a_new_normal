@@ -31,6 +31,7 @@
     height: 41px
 
 .learn-more-button
+  position: relative
   display: inline-block
   background-color: $accent-color
   transition: background .2s ease-in
@@ -40,11 +41,20 @@
   &:active
     background-color: $accent-active-color
     transition: background .2s ease-out
+  &:after
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMS42OCA4LjY2Ij48ZGVmcz48c3R5bGU+LmxlYXJuLW1vcmV7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1taXRlcmxpbWl0OjEwO308L3N0eWxlPjwvZGVmcz48dGl0bGU+0KDQtdGB0YPRgNGBIDM5PC90aXRsZT48ZyBpZD0i0KHQu9C+0LlfMiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIj48ZyBpZD0i0KHQu9C+0LlfMS0yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiPjxwb2x5bGluZSBjbGFzcz0ibGVhcm4tbW9yZSIgcG9pbnRzPSI3IDguMyAxMC45NyA0LjMzIDcgMC4zNSIvPjxsaW5lIGNsYXNzPSJsZWFybi1tb3JlIiB4MT0iNiIgeTE9IjQuMyIgeTI9IjQuMyIvPjwvZz48L2c+PC9zdmc+)
+    position: absolute
+    z-index: -1
+    width: 10px
+    height: 9px
+    right: 35px
+    bottom: 51%
+    transform: translateY(-51%)
   .learn-more-link
     display: block
     width: 100%
     height: 100%
-    padding: 15px 35px
+    padding: 15px 65px 15px 35px
     +medium-font
     font-size: 13px
     text-decoration: none
