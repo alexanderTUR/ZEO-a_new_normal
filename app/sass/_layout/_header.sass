@@ -39,10 +39,14 @@
 .header-burger
   display: none
   position: absolute
-  top: 32px
-  right: 2%
-  padding: 10px 0
+  top: 0
+  right: 0
+  padding: 46px 30px
   cursor: pointer
+  //&:hover
+    background-color: $accent-color
+  //&:hover > .burger-icon
+    background-color: #fff
   +media-width-max(768)
     display: block
 
@@ -69,9 +73,11 @@
   background-color: transparent
   &:before
     top: 0
+    //background-color: $white-color
     transform: rotate(-45deg)
   &:after
     top: 0
+    //background-color: $white-color
     transform: rotate(45deg)
 
 .main-menu-list
@@ -81,12 +87,21 @@
   transition: all .2s ease-out
   +media-width-max(768)
     position: absolute
+    width: 100%
     flex-direction: column
     height: 0
-    top: 100px
-    right: 2%
+    top: 94px
+    left: 0
+    //padding-top: 10px
     text-align: right
     overflow: hidden
+    background-color: $accent-bg-color
+  .menu-item
+    +media-width-max(768)
+      text-align: center
+    &:first-child
+      +media-width-max(768)
+        margin-top: 10px
   .menu-item:not(:last-child)
     margin-right: 20px
     +media-width-max(1200)
@@ -110,6 +125,9 @@
     +media-width-max(768)
       &:hover
         border-top: none
+        color: $white-color
+      &:active
+        color: $accent-active-color
 
 .menu-open
   height: 225px
@@ -174,6 +192,8 @@
   color: $white-color
   +media-width-max(1024)
     margin-left: 2%
+  +media-width-max(768)
+    z-index: -1
   &:before
     content: ""
     display: block

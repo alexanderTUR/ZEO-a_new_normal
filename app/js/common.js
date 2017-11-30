@@ -1,5 +1,21 @@
 $(function() {
 
+	// Share to social function
+	function windowPopup(url, width, height) {
+		var left = ($(window).width() / 2) - (width / 2),
+			top = ($(window).height() / 2) - (height / 2);
+		window.open(
+			url,
+			"",
+			"menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+		);
+	}
+
+	$(".js-social-share").on("click", function(e) {
+		e.preventDefault();
+		windowPopup($(this).attr("href"), 500, 300);
+	});
+
 	// Loader hide
 	setTimeout(function(){$('body').addClass('loaded');}, 1000);
 
@@ -9,24 +25,27 @@ $(function() {
 	});
 
 	// Menu functions
-	var $burgerIcon = $('.burger-icon');
-	var $menuList = $('.main-menu-list');
+	mobileMenuSwich();
+	function mobileMenuSwich() {
+		var $burgerIcon = $('.burger-icon');
+		var $menuList = $('.main-menu-list');
 
-	$('.header-burger').click(function () {
-		$burgerIcon.toggleClass('burger-close');
-		$menuList.toggleClass('menu-open');
-	});
+		$('.header-burger').click(function () {
+			$burgerIcon.toggleClass('burger-close');
+			$menuList.toggleClass('menu-open');
+		});
+	}
+
+	function menuClose () {
+		if ($('.burger-icon').hasClass('burger-close')) {
+			$('.burger-icon').removeClass('burger-close');
+			$('.main-menu-list').removeClass('menu-open')
+		}
+	}
 
 	$(window).resize(function() {
 		menuClose();
 	});
-
-	function menuClose () {
-		if ($burgerIcon.hasClass('burger-close')) {
-			$burgerIcon.removeClass('burger-close');
-			$menuList.removeClass('menu-open')
-		}
-	}
 
 	// Sliders init
 	$('#how-slider').slick({
@@ -198,8 +217,8 @@ $(function() {
 			}]
 	});
 
-	pageScroll();
 	// Page scroll animation function
+	pageScroll();
 	function pageScroll() {
 		var pageScrollCtrl = new ScrollMagic.Controller({
 			// addIndicators: true,
@@ -228,13 +247,109 @@ $(function() {
 		});
 	}
 
-	// Header animation
-	var $header = $('.header-top');
-	var $mainTitle = $('.header-title');
-	var headerTimeLine = new TimelineLite();
+	// MainPage animation init
+	if($('#main').length) {
+		headerMainAnimation();
+	}
 
-	headerTimeLine.from($header, 1.5, {y: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '+=0.5')
-			.from($mainTitle, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=0.5');
+	// Header animation
+	function headerMainAnimation() {
+		var $mainHeaderContainer = $('.header-top'),
+			$headerLogo = $('.header-logo-container'),
+			$menuItems = $('.menu-item'),
+			$socialIcons = $('.social-item'),
+			$mainTitle = $('.header-title'),
+			headerTimeLine = new TimelineLite();
+
+		headerTimeLine
+			.from($mainHeaderContainer, 1, {y: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '+=1.5')
+			.addLabel('startHeaderAnimation', '-=0.5')
+			.from($headerLogo, 1, {x: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startHeaderAnimation', '-=0.5')
+			.staggerFrom($menuItems, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.1, 'startHeaderAnimation')
+			.staggerFrom($socialIcons, 0.8, {x: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.15, '-=0.8')
+			.from($mainTitle, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1.5')
+	}
+
+	if($('#all-news').length) {
+		headerNewsAnimation();
+		filtersAnimation();
+		newsAnimation();
+		paginationAndFooterAnimation();
+	}
+
+	function headerNewsAnimation() {
+		var $headerLogo = $('.header-logo-container'),
+			$menuItems = $('.menu-item'),
+			$socialIcons = $('.social-item'),
+			headerTimeLine = new TimelineLite();
+
+		headerTimeLine
+			.addLabel('startHeaderAnimation', '+=1.5')
+			.from($headerLogo, 1, {x: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startHeaderAnimation', '-=0.5')
+			.staggerFrom($menuItems, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.1, 'startHeaderAnimation')
+			.staggerFrom($socialIcons, 0.8, {x: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.15, '-=0.8')
+	}
+
+	function filtersAnimation() {
+		var $newsTitle = $('.all-news-main-title'),
+			$filterTitle = $('.filter-title'),
+			$filtersItems = $('.filter-button'),
+			filterTimeLine = new TimelineLite();
+
+		filterTimeLine
+			.addLabel('startFilterAnimation', '+=1.5')
+			.from($newsTitle, 1, {x: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startFilterAnimation')
+			.from($filterTitle, 1, {y: '+=30px', autoAlpha: 0, ease:Power4.easeInOut}, 'startFilterAnimation')
+			.staggerFrom($filtersItems, 0.5, {x: '-=60px', autoAlpha: 0, ease:Power4.easeIn}, 0.1, '-=0.4')
+
+	}
+
+	function newsAnimation() {
+		var newsItem = $('.news-thumbnail-item'),
+			newsTimeLine = new TimelineLite();
+
+		newsTimeLine
+			.staggerFrom(newsItem, 1, {y: '+=100%', autoAlpha: 0, ease:Back.easeOut.config(1.7)}, 0.05, '+=2.5')
+	}
+
+	function paginationAndFooterAnimation() {
+		var $prevButton = $('.aggregator-prev-button'),
+			$nextButton = $('.aggregator-next-button'),
+			$numbersButton = $('.aggregator-counter > li'),
+			$footerLogo = $('.footer-logo-container'),
+			$footerCopy = $('.footer-copy'),
+			$footerSubCopy = $('.footer-subcopy'),
+			paginationTimeLine = new TimelineLite();
+
+		paginationTimeLine
+
+			.from($prevButton, 2, {x:'+=100%', autoAlpha: 0, ease:Power4.easeInOut})
+			.from($nextButton, 2, {x:'-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '-=2')
+			.staggerFrom($numbersButton, 1, {y: '+=100%', autoAlpha: 0, ease:Power4.easeInOut}, 0.1, '-=1.5')
+			.addLabel('startFooterAnimation', '+=2')
+			.from($footerLogo, 1, {rotation: 190, autoAlpha: 0, ease:Power4.easeInOut}, 'startFooterAnimation')
+			.from($footerCopy, 1, {y:'+=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startFooterAnimation')
+			.from($footerSubCopy, 1, {y:'+=100%', autoAlpha: 0, ease:Power4.easeInOut, delay: 1}, 'startFooterAnimation');
+
+		var paginationScrollCtrl = new ScrollMagic.Controller({
+			addIndicators: true,
+			globalSceneOptions: {
+				triggerHook: 1
+			}
+		});
+
+		var rhombusScene = new ScrollMagic.Scene({
+			triggerElement: '.aggregator-control-container',
+			duration: "320"
+		})
+			.setTween(paginationTimeLine)
+			.addTo(paginationScrollCtrl);
+
+	}
+
+	if($('#single-news').length) {
+		headerNewsAnimation();
+	}
 
 	// Waypoint+AnimateCSS functions
 	(function($) {
@@ -301,7 +416,7 @@ $(function() {
 	$('.contact-title').animated('fadeIn', '80%');
 	$('.contact-list').animated('fadeIn', '80%');
 	$('.contact-social-list').animated('fadeInUp', '80%');
-	$('.footer-container').animated('fadeIn', '80%');
+	// $('.footer-container').animated('fadeIn', '80%');
 
 });
 
