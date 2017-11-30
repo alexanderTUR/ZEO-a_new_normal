@@ -79,13 +79,19 @@
     margin-right: 8px
 
 .news-content
+  +light-font
+  font-size: 14px
+  color: $dark-color
+  line-height: 2
+  margin-bottom: 60px
+  +media-width-max(768)
+    margin-bottom: 30px
   +clearfix
   h2, h3, h4, h5, h6
-    margin-bottom: 25px
     +medium-font
     text-transform: uppercase
     line-height: 1.4
-    color: $dark-color
+    margin: 1em 0 0.5em
   h2
     font-size: 26px
   h3
@@ -96,21 +102,22 @@
     font-size: 14px
   h6
     font-size: 12px
-  p, b
-    margin-bottom: 40px
-    font-size: 14px
-    line-height: 2
-    color: $dark-color
-    &:last-child
-      margin-bottom: 60px
-    +media-width-max(768)
-      margin-bottom: 30px
   p
     +light-font
   b
-    display: block
     +medium-font
-    margin-bottom: 50px
+  p, ul, ol
+    margin: 1em 0
+  ul
+    list-style: square
+  ol
+    list-style: decimal
+  ol, ul
+    padding-left: 40px
+    +media-width-max(768)
+      margin-left: 20px
+  a
+    color: #2b7dcb
   img
     margin-bottom: 25px
     max-width: 100%
@@ -120,8 +127,12 @@
     position: relative
     float: left
     width: 350px
-    margin: 8px 7% 40px 0
+    margin: 8px 5% 20px 0
     padding: 85px 60px
+    *
+      color: inherit
+    > :last-child
+      margin-bottom: 0  
     +medium-font
     font-size: 16px
     background-color: $accent-color
