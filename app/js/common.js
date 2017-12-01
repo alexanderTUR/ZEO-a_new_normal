@@ -332,7 +332,7 @@ $(function() {
 			.from($footerSubCopy, 1, {y:'+=100%', autoAlpha: 0, ease:Power4.easeInOut, delay: 1}, 'startFooterAnimation');
 
 		var paginationScrollCtrl = new ScrollMagic.Controller({
-			addIndicators: true,
+			// addIndicators: true,
 			globalSceneOptions: {
 				triggerHook: 1
 			}
