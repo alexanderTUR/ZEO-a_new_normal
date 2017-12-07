@@ -6,6 +6,7 @@
   max-width: 1400px
   margin: 0 auto
   padding-bottom: 85px
+  overflow: hidden
   .backtotop-button
     position: absolute
     right: 0
@@ -24,6 +25,8 @@
 .how-slider-wrapper
   position: relative
   margin-bottom: 65px
+  +media-width-max(320)
+    margin-bottom: 20px
   .slider-left-arrow
     left: 40px
     +media-width-max(1024)

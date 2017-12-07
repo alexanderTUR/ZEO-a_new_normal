@@ -35,7 +35,6 @@ $(function() {
 			$menuList.toggleClass('menu-open');
 		});
 	}
-
 	function menuClose () {
 		if ($('.burger-icon').hasClass('burger-close')) {
 			$('.burger-icon').removeClass('burger-close');
@@ -228,7 +227,7 @@ $(function() {
 		});
 
 		pageScrollCtrl.scrollTo(function (newpos) {
-			TweenLite.to(window, 1, {scrollTo: {y: newpos}, ease:Power1.easeInOut});
+			TweenLite.to(window, 1.5, {scrollTo: {y: newpos}, ease:Power1.easeInOut});
 		});
 
 		$(document).on("click", "a[rel='pageScroll']", function (e) {
@@ -262,13 +261,176 @@ $(function() {
 			headerTimeLine = new TimelineLite();
 
 		headerTimeLine
-			.from($mainHeaderContainer, 1, {y: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '+=1.5')
+			.from($mainHeaderContainer, 1, {y: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '+=1.2')
 			.addLabel('startHeaderAnimation', '-=0.5')
 			.from($headerLogo, 1, {x: '-=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startHeaderAnimation', '-=0.5')
 			.staggerFrom($menuItems, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.1, 'startHeaderAnimation')
 			.staggerFrom($socialIcons, 0.8, {x: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.15, '-=0.8')
 			.from($mainTitle, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1.5')
 	}
+
+	// // Main ScrollMagic controller init
+	// var mainScrollMagicController = new ScrollMagic.Controller({
+	// 	addIndicators: true,
+	// 	globalSceneOptions: {
+	// 		triggerHook: 0.9
+	// 	}
+	// });
+	//
+	// // Why header animation
+	// var $whyTitle = $('.why-title'),
+	// 	$titleAccent = $('.why-title>.title-accent'),
+	// 	$whyTitleTween = new TimelineLite();
+	//
+	// $whyTitleTween
+	// 	.from($whyTitle, 1.5, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut})
+	// 	.from($titleAccent, 1, {color:'#333', ease:Power4.easeInOut}, 1.5);
+	//
+	// var $whyTitleScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.why-how-section'
+	// })
+	// 	.setTween($whyTitleTween)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // Why back-on-top button animation
+	// var $whyBackOnTopButton = $('#why>.backtotop-button'),
+	// 	$whyBackOnTop = TweenLite.from($whyBackOnTopButton, 1, {x:'+=100px', autoAlpha: 0, ease:Power4.easeInOut});
+	//
+	// var whyBackOnTopScene = new ScrollMagic.Scene({
+	// 	triggerElement: $whyBackOnTopButton
+	// })
+	// 	.setTween($whyBackOnTop)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // Why text in red block animation
+	// var $whyText = $('.why-text'),
+	// 	$whyTextDuration = $('.why-text-container').outerHeight(),
+	// 	$whyTextContianer = $('.why-text-container')
+	// 	whyTextimeLine = new TimelineLite();
+	//
+	// whyTextimeLine
+	// 	.staggerFrom($whyText, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 1);
+	//
+	// var whyTextScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.why-text-container',
+	// 	// duration: $whyTextDuration
+	// 	// duration: updateDuration()
+	// })
+	// 	.setTween(whyTextimeLine)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // Change duration on resize
+	// function updateDuration (sc, el) {
+	// 	var duration = sc.duration();
+	// 	var durationValueCache;
+	// 	function getDuration () {
+	// 		return durationValueCache = el.outerHeight();
+	// 	}
+	// 	sc.duration(getDuration); // supply duration method
+	// }
+	// $(window).on("resize", updateDuration); // update the duration when the window size changes
+	// $(window).triggerHandler("resize"); // set to initial value
+	//
+	// // var duration = whyTextScene.duration();
+	// // var durationValueCache;
+	// // function getDuration () {
+	// // 	return durationValueCache;
+	// // }
+	// // function updateDuration (e) {
+	// // 	durationValueCache = $('.why-text-container').outerHeight();
+	// // }
+	// // $(window).on("resize", updateDuration); // update the duration when the window size changes
+	// // $(window).triggerHandler("resize"); // set to initial value
+	// // whyTextScene.duration(getDuration); // supply duration method
+	//
+	// // How back-on-top button animation
+	// var $howBackOnTopButton = $('#how>.backtotop-button'),
+	// 	$howBackOnTop = TweenLite.from($howBackOnTopButton, 1, {x:'+=100px', autoAlpha: 0, ease:Power4.easeInOut});
+	//
+	// var howBackOnTopScene = new ScrollMagic.Scene({
+	// 	triggerElement: $howBackOnTopButton
+	// })
+	// 	.setTween($howBackOnTop)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // How header animation
+	// var $howTitle = $('.how-title'),
+	// 	$howTitleAccent = $('.how-title>.title-accent'),
+	// 	$howTitleTween = new TimelineLite();
+	//
+	// $howTitleTween
+	// 	.from($howTitle, 1.5, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut})
+	// 	.from($howTitleAccent, 1, {color:'#333', ease:Power4.easeInOut}, 1.5);
+	//
+	// var $howTitleScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.how-container',
+	// 	offset: '190px'
+	// })
+	// 	.setTween($howTitleTween)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // How slider animation
+	// var $howSlider = $('.how-slider-container'),
+	// 	$howSliderLArrow = $('.how-slider-wrapper > .slider-left-arrow'),
+	// 	$howSliderRArrow = $('.how-slider-wrapper > .slider-right-arrow'),
+	// 	$howSliderTextBlock = $('.slide-title-container'),
+	// 	$howSliderCountBlock = $('.slide-counter-container'),
+	// 	sliderTimeLine = new TimelineLite();
+	//
+	// sliderTimeLine
+	// 	.from($howSlider, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
+	// 	.from($howSliderLArrow, 1, {x:'-=100px', autoAlpha: 0, ease:Power4.easeInOut, deley: 2})
+	// 	.from($howSliderRArrow, 1, {x:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
+	// 	.from($howSliderTextBlock, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
+	// 	.from($howSliderCountBlock, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1');
+	//
+	// var howHowScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.how-slider-wrapper'
+	// })
+	// 	.setTween(sliderTimeLine)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// // How slider text animation
+	// var $howSliderText = $('.how-text-wrap'),
+	// 	$howSliderTextTween = TweenLite.from($howSliderText, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut});
+	//
+	// var howSliderTextScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.how-text'
+	// })
+	// 	.setTween($howSliderTextTween)
+	// 	.addTo(mainScrollMagicController);
+	//
+	// var $univercityTitle = $('.zeo-university-header'),
+	// 	$univercityText = $('.zeo-university-text'),
+	// 	$univercityLearnMore = $('.zeo-university-info-container>.learn-more-wrapper'),
+	// 	univercityTextTimeLine = new TimelineLite(),
+	// 	univercityDuration = $('.zeo-university-section').outerHeight(true);
+	//
+	// univercityTextTimeLine
+	// 	.from($univercityTitle, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut})
+	// 	.staggerFrom($univercityText, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.5, '-=0.5')
+	// 	.from($univercityLearnMore, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut});
+	//
+	// var univercityTextScene = new ScrollMagic.Scene({
+	// 	triggerElement: '.zeo-university-section',
+	// 	duration: $whyTextDuration
+	// })
+	// 	.setTween(univercityTextTimeLine)
+	// 	.addTo(mainScrollMagicController);
+
+	// Change duration on resize
+	// var durationUnivercity = univercityTextScene.duration();
+	// var durationValueCache2;
+	// function getDuration () {
+	// 	return durationValueCache2;
+	// }
+	// function updateDuration (e) {
+	// 	durationValueCache2 = $('.zeo-university-section').outerHeight(true);
+	// }
+	// $(window).on("resize", updateDuration); // update the duration when the window size changes
+	// $(window).triggerHandler("resize"); // set to initial value
+	// univercityTextScene.duration(getDuration); // supply duration method
+
 
 	if($('#all-news').length) {
 		headerNewsAnimation();
