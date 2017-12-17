@@ -2,8 +2,8 @@ $(function() {
 
 	// Share to social function
 	function windowPopup(url, width, height) {
-		var left = ($(window).width() / 2) - (width / 2),
-			top = ($(window).height() / 2) - (height / 2);
+		var left = Math.floor(($(window).width() - width) / 2),
+			top = Math.floor(($(window).height() - height) / 2);
 		window.open(
 			url,
 			"",
@@ -13,7 +13,8 @@ $(function() {
 
 	$(".js-social-share").on("click", function(e) {
 		e.preventDefault();
-		windowPopup($(this).attr("href"), 500, 300);
+    var url = $(this).attr("href") + document.location.href;
+		windowPopup(url, 500, 300);
 	});
 
 	// Loader hide
