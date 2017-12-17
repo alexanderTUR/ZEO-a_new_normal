@@ -35,6 +35,9 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
+    <style type="text/css">
+        .loader{display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border:3px solid transparent;border-top-color:#ff5607;-webkit-border-radius:50%;border-radius:50%;z-index:1500;-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}.loader:before{content:"";position:absolute;top:5px;left:5px;right:5px;bottom:5px;border:3px solid transparent;border-top-color:#fff;-webkit-border-radius:50%;border-radius:50%;-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}.loader:after{content:"";position:absolute;top:15px;left:15px;right:15px;bottom:15px;border:3px solid transparent;border-top-color:#686868;-webkit-border-radius:50%;border-radius:50%;-webkit-animation:spin 1.5s linear infinite;animation:spin 1.5s linear infinite}.loader-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}.loader-wrapper .loader-section{position:fixed;top:0;width:51%;height:100%;background:#242424;z-index:1000}.loader-wrapper .loader-section.section-left{left:0}.loader-wrapper .loader-section.section-right{right:0}.loaded .loader-wrapper .loader-section.section-left{-webkit-transform:translateX(-100%) translateZ(0);transform:translateX(-100%) translateZ(0);-webkit-transition:all .7s .3s cubic-bezier(.645,.045,.355,1);-o-transition:all .7s .3s cubic-bezier(.645,.045,.355,1);transition:all .7s .3s cubic-bezier(.645,.045,.355,1)}.loaded .loader-wrapper .loader-section.section-right{-webkit-transform:translateX(100%) translateZ(0);transform:translateX(100%) translateZ(0);-webkit-transition:all .7s .3s cubic-bezier(.645,.045,.355,1);-o-transition:all .7s .3s cubic-bezier(.645,.045,.355,1);transition:all .7s .3s cubic-bezier(.645,.045,.355,1)}.loaded .loader{opacity:0;-webkit-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}.loaded .loader-wrapper{visibility:hidden;-webkit-transform:translateY(-100%) translateZ(0);transform:translateY(-100%) translateZ(0);-webkit-transition:all .3s 1s ease-out;-o-transition:all .3s 1s ease-out;transition:all .3s 1s ease-out}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0) translateZ(0);transform:rotate(0) translateZ(0)}100%{-webkit-transform:rotate(360deg) translateZ(0);transform:rotate(360deg) translateZ(0)}}@keyframes spin{0%{-webkit-transform:rotate(0) translateZ(0);transform:rotate(0) translateZ(0)}100%{-webkit-transform:rotate(360deg) translateZ(0);transform:rotate(360deg) translateZ(0)}}
+    </style>
     <!--Loader end-->
     <!--Header bgn-->
     <header class="header" id="header_bg" data-image-src="img/header_bg.jpg">
@@ -1358,15 +1361,17 @@
                         <p class="story-text">In 2015, we launched an ambitious mission to “Create a New Normal”. New Normal is not only about products and exploring new markets, but also about ongoing personal growth, leaving your comfort zone and overcoming challenges. To further strengthen this mission, we launched ZEO University – a non-profit educational institution that aims to empower entrepreneurs through gaining practical knowledge from professionals and practitioners from around the world. Several students have gone on to develop successful products and companies of their own.</p>
                     </li>
                     <li class="story-item">
+                        <div class="story-sep-circle"></div>
                         <div class="story-sep-line"></div>
                         <p class="story-text story-text_shift">Today, ZEO Alliances runs and manages four separate companies with that all share the same vision of creating a new normal.</p>
                     </li>
                     <li class="story-item">
+                        <div class="story-sep-circle"></div>
                         <div class="story-sep-line"></div>
                         <p class="story-text story-text_shift">Slava and Yuriy believe in their hearts that by building a team that shares their passion for products, for challenges and the vision of creating a New Normal, they will create even more remarkable products, and impact ever greater numbers of people around the world.</p>
                     </li>
                     <li class="story-item">
-                        <div class="story-sep-line"></div>
+                        <div class="story-sep-circle"></div>
                         <div class="learn-more-button story-text_shift">
                             <a href="img/The_ZEO_Story.pdf" class="learn-more-link" target="_blank" rel="noopener">Read full story</a>
                         </div>
@@ -1708,8 +1713,10 @@
                     </ul>
                 </div>
                 <!--Join us for backEnd end-->
-                <div class="learn-more-button">
-                    <a href="https://zeoalliance.com/en/career" target="_blank" rel="noopener" class="learn-more-link">see all</a>
+                <div class="learn-more-wrapper">
+                    <div class="learn-more-button">
+                        <a href="https://zeoalliance.com/en/career" target="_blank" rel="noopener" class="learn-more-link">see all</a>
+                    </div>
                 </div>
             </div>
         </div>
