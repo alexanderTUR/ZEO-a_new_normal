@@ -10,7 +10,6 @@ $(function() {
 			"menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
 		);
 	}
-
 	$(".js-social-share").on("click", function(e) {
 		e.preventDefault();
     var url = $(this).attr("href") + document.location.href;
@@ -437,8 +436,8 @@ $(function() {
 
 		sliderTimeLine
 			.from($howSlider, 1, {y:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
-			.from($howSliderLArrow, 1, {x:'-=100px', autoAlpha: 0, ease:Power4.easeInOut, deley: 2})
-			.from($howSliderRArrow, 1, {x:'+=100px', autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
+			.from($howSliderLArrow, 1, {autoAlpha: 0, ease:Power4.easeInOut, deley: 2})
+			.from($howSliderRArrow, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
 			.from($howSliderTextBlock, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1')
 			.from($howSliderCountBlock, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1');
 
@@ -749,8 +748,8 @@ $(function() {
 			.addLabel('startZoomCustomersAnimation')
 			.from($zoomCustomersTitle, 0.5, {y:'+=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startZoomCustomersAnimation')
 			.staggerFrom(zoomCustomersItem, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.2, 'startZoomCustomersAnimation-=0.5')
-			.from($zoomCustomersPrevButton, 1, {x:'-=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startZoomCustomersAnimation+=1.2')
-			.from($zoomCustomersNextButton, 1, {x:'+=100%', autoAlpha: 0, ease:Power4.easeInOut}, 'startZoomCustomersAnimation+=1.2');
+			.from($zoomCustomersPrevButton, 1, {autoAlpha: 0, ease:Power4.easeInOut}, 'startZoomCustomersAnimation+=1.2')
+			.from($zoomCustomersNextButton, 1, {autoAlpha: 0, ease:Power4.easeInOut}, 'startZoomCustomersAnimation+=1.2');
 
 		new ScrollMagic.Scene({
 			triggerElement: zoomCustomersWrapper
@@ -885,8 +884,8 @@ $(function() {
 
 		joinItemTimeLine
 			.from($joinItem, 1, {y: '+=50px', autoAlpha: 0, ease:Power4.easeInOut})
-			.from($joinItemPrevButton, 1, {x:'-=100%', autoAlpha: 0, ease:Power4.easeInOut}, '-=0.2')
-			.from($joinItemNextButton, 1, {x:'+=100%', autoAlpha: 0, ease:Power4.easeInOut}, '-=1');
+			.from($joinItemPrevButton, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=0.2')
+			.from($joinItemNextButton, 1, {autoAlpha: 0, ease:Power4.easeInOut}, '-=1');
 
 		new ScrollMagic.Scene({
 			triggerElement: $joinItemWrapper
@@ -957,7 +956,6 @@ $(function() {
 			.addTo(mainScrollMagicController);
 
 	}
-
 
 	if($('#all-news').length) {
 		headerNewsAnimation();
@@ -1039,73 +1037,6 @@ $(function() {
 	if($('#single-news').length) {
 		headerNewsAnimation();
 	}
-
-	// Waypoint+AnimateCSS functions
-	// (function($) {
-	// 	$.fn.animated = function(inEffect, oSet) {
-	// 		$(this).css("opacity", "0").addClass("animated");
-	//
-	// 		$(this).waypoint(function(direction) {
-	// 			if (direction === "down") {
-	// 				$(this.element).addClass(inEffect).css("opacity", "1")
-	// 			}
-	// 		}, {
-	// 			offset: oSet
-	// 		});
-	// 	};
-	// })(jQuery);
-
-	// $('.why-container').animated('fadeIn', '80%');
-	// $('.backtotop-button').animated('fadeInRight', '80%');
-	// $('.why-text').animated('fadeIn', '80%');
-	// $('.how-title').animated('fadeIn', '80%');
-	// $('.how-slider-wrapper').animated('fadeIn', '80%');
-	// $('.how-text-wrap').animated('fadeIn', '80%');
-	// $('.learn-more-button').animated('fadeInUp', '80%');
-	// $('.zeo-university-img-container').animated('fadeIn', '80%');
-	// $('.zeo-university-header').animated('fadeIn', '80%');
-	// $('.zeo-university-text').animated('fadeIn', '80%');
-	// $('.company-logo-container').animated('fadeInLeft', '80%');
-	// $('.company-aside').animated('fadeInLeft', '80%');
-	// $('.company-info-title').animated('fadeIn', '80%');
-	// $('.company-info-text').animated('fadeIn', '80%');
-	// $('.company-advent-item').animated('fadeIn', '80%');
-	// $('.kromtech-robo-container').animated('fadeIn', '80%');
-	// $('.kromtech-bg-robo').animated('fadeIn', '80%');
-	// $('.company-products-list').animated('fadeIn', '80%');
-	// $('.kromtech-partners-item').animated('fadeIn', '80%');
-	// $('.aggregator-container').animated('fadeIn', '80%');
-	// $('.onset-img-container').animated('fadeIn', '80%');
-	// $('.onset-advent-list').animated('fadeIn', '80%');
-	// $('.egg-logo').animated('fadeIn', '80%');
-	// $('.youtube-container').animated('fadeIn', '80%');
-	// $('.egg-features-container').animated('fadeIn', '80%');
-	// $('.egg-quote-container').animated('fadeIn', '80%');
-	// $('.egg-partners-container').animated('fadeIn', '80%');
-	// $('.jammy-info').animated('fadeIn', '80%');
-	// $('.jammy-features-title').animated('fadeIn', '80%');
-	// $('.indiegogo-banner').animated('fadeIn', '80%');
-	// $('.jammy-partners-container').animated('fadeIn', '80%');
-	// $('.novnify-key-container').animated('fadeIn', '80%');
-	// $('.novnify-circles-container').animated('fadeIn', '80%');
-	// $('.zoom-img-container').animated('fadeIn', '80%');
-	// $('.zoom-customers-wrapper').animated('fadeIn', '80%');
-	// $('.about-title').animated('fadeIn', '80%');
-	// $('.about-subtitle').animated('fadeIn', '80%');
-	// $('.story-year').animated('fadeIn', '80%');
-	// $('.story-sep-circle').animated('zoomIn', '80%');
-	// $('.story-text').animated('fadeIn', '80%');
-	// $('.management-title').animated('fadeIn', '80%');
-	// $('.manager-item').animated('fadeIn', '80%');
-	// $('.together-title').animated('fadeIn', '80%');
-	// $('.partners-list').animated('fadeIn', '80%');
-	// $('.join-title').animated('fadeIn', '80%');
-	// $('.join-text').animated('fadeIn', '80%');
-	// $('.join-slider-wrapper').animated('fadeIn', '80%');
-	// $('.contact-title').animated('fadeIn', '80%');
-	// $('.contact-list').animated('fadeIn', '80%');
-	// $('.contact-social-list').animated('fadeInUp', '80%');
-	// $('.footer-container').animated('fadeIn', '80%');
 
 });
 

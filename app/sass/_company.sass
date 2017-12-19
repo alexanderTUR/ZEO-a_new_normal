@@ -2,6 +2,7 @@
 @import "_mixins/helpers"
 
 .company-content-wrapper
+  overflow: hidden
   margin-left: 8%
   margin-right: 8%
   +media-width-max(1024)
@@ -19,6 +20,8 @@
 
 .company-logo-container
   float: left
+  +media-width-max(425)
+    float: none
 
 .company-content-wrapper
   display: flex

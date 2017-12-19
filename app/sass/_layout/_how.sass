@@ -33,24 +33,32 @@
       left: 0
     +media-width-max(768)
       top: initial
-      bottom: 70px
-      left: 4%
+      bottom: 120px
+      left: 2%
       transform: none
       .left-arrow
         stroke: $white-color
+    +media-width-max(425)
+      bottom: 29%
+    +media-width-max(320)
+      bottom: 40%
   .slider-right-arrow
     right: 40px
     +media-width-max(1024)
       right: 0
     +media-width-max(768)
       top: initial
-      bottom: 70px
-      right: 4%
+      bottom: 120px
+      right: 2%
       transform: none
       .right-arrow
         top: initial
         stroke: $white-color
         transform: none
+    +media-width-max(425)
+      bottom: 29%
+    +media-width-max(320)
+      bottom: 40%
 
 .how-slider-container
   padding: 0 8%
@@ -82,16 +90,17 @@
       width: 590px
       padding: 40px 60px
       +media-width-max(768)
-        width: 100%
-        bottom: 30px
-        padding-right: calc(9% + 110px)
-      +media-width-max(640)
         position: relative
         top: initial
         bottom: 30px
         left: initial
         right: initial
-        padding-right: 40px
+        width: 100%
+        padding-right: calc(9% + 110px)
+      +media-width-max(425)
+        padding-right: 50px
+        padding-left: 50px
+      +media-width-max(768)
       .slide-title
         margin: 0 0 10px 0
         +bold-font
