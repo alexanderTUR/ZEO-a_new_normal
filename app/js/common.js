@@ -757,6 +757,7 @@ $(function() {
 			.setTween(zoomCustomersTimeLine)
 			.addTo(mainScrollMagicController);
 
+
 		// About title animation
 		var $aboutTitle = $('.about-title'),
 			$aboutSubTitle = $('.about-subtitle'),
@@ -930,7 +931,7 @@ $(function() {
 			contactSocialTimeLine = new TimelineLite();
 
 		contactSocialTimeLine
-			.staggerFrom($contactSocialItem, 1, {y: '+=30px', autoAlpha: 0, ease:Power4.easeInOut}, 0.15);
+			.staggerFrom($contactSocialItem, 1, {x: '-=50px', autoAlpha: 0, ease:Power4.easeInOut}, 0.15);
 
 		new ScrollMagic.Scene({
 			triggerElement: $contactSocialContainer
@@ -1036,6 +1037,17 @@ $(function() {
 
 	if($('#single-news').length) {
 		headerNewsAnimation();
+		singleNewsAnimation();
+	}
+
+	function singleNewsAnimation() {
+		var $newsContainer = ('.news-container'),
+			$tumbnailItem = ('.news-thumbnail-item'),
+			singleNewsTimeLine = new TimelineLite();
+
+		singleNewsTimeLine
+			.from($newsContainer, 1, {y: '+=50px', autoAlpha: 0, ease:Power1.easeInOut}, '+=2.5')
+			.staggerFrom($tumbnailItem, 1, {y: '+=50px', autoAlpha: 0, ease:Power1.easeInOut}, 0.05, '-=0.5')
 	}
 
 });
