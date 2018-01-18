@@ -79,16 +79,19 @@
     display: block
     width: 40px
     height: 40px
-    .social-1, .social-2
-      transition: all .1s ease-out
-    &:hover
-      .social-1
-        transition: fill .2s ease-out
-        fill: $white-color
-      .social-2
-        stroke: $accent-color
-        transition: stroke .2s ease-out
+
     svg
       +img
+      transition: fill .2s ease-out
+      fill: #fc5721
+
+    &:hover svg
+      fill: #f72711
+    &:active svg
+      fill: #c81f0d
+    
+    .cls-2
+      fill: white
+
   .social-item + .social-item
     margin-left: 2px

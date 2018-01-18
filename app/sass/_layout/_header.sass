@@ -135,49 +135,45 @@
 .header-social-list
   display: flex
   padding-left: 4%
-  align-items: baseline
+  align-items: center
   +media-width-max(1024)
     display: none
   .social-item:not(:last-child)
-    margin-right: 15px
-    +media-width-max(1200)
-      margin-right: 7px
-  .social-facebook, .social-linkedin, .social-youtube, .social-instagram
+    margin-right: 7px
+  .social-item:last-child
+    margin-right: 7px
+
+  .social-facebook, 
+  .social-linkedin, 
+  .social-youtube, 
+  .social-instagram
     display: block
     box-sizing: content-box
     padding: 5px
     svg
       +img
-  .facebook, .linkedin, .youtube, .instagram
-    transition: stroke .2s ease-out
+      fill: #fc5721
+      transition: fill .2s ease-out
+    &:hover svg
+      fill: #f72711
+    &:active svg
+      fill: #c81f0d
+
   .social-facebook
-    width: 8px
-    height: 19px
-    &:hover
-      .facebook
-        stroke: $accent-color
-        transition: stroke .2s ease-out
+    width: 19px
+    height: 18px
+          
   .social-linkedin
-    width: 16px
-    height: 16px
-    &:hover
-      .linkedin
-        stroke: $accent-color
-        transition: stroke .2s ease-out
+    width: 19px
+    height: 18px
+
   .social-youtube
-    width: 21px
-    height: 17px
-    &:hover
-      .youtube
-        stroke: $accent-color
-        transition: stroke .2s ease-out
-  .social-instagram
-    width: 16px
+    width: 24px
     height: 16px
-    &:hover
-      .instagram
-        stroke: $accent-color
-        transition: stroke .2s ease-out
+
+  .social-instagram
+    width: 19px
+    height: 18px
 
 .header-title
   display: inline-block
