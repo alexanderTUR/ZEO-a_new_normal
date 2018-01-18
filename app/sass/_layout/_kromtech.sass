@@ -4,7 +4,7 @@
 .kromtech-section
   position: relative
   z-index: 10
-  background-color: $comp-bg-color
+  background-color: #ededed
   .backtotop-button
     background-color: $gray-button-bg
   .learn-more-wrapper
@@ -36,14 +36,23 @@
       margin-bottom: 45px
   .kromtech-products
     .company-products-item
-      +media-width-max(640)
-        width: 33%
-      +media-width-max(480)
+      width: calc(100% / 6)
+      +media-width-max(920)
+        width: calc(100% / 3)
+      +media-width-max(520)
         width: 50%
     .company-products-list
+      align-items: baseline
       +media-width-max(640)
         justify-content: center
         margin-bottom: 0
+    
+  &.__continue
+    background-color: $comp-bg-color
+    .kromtech-wrapper
+      padding-bottom: $big-sp
+      +media-width-max(640)
+        padding-bottom: 30px
 
 .kromtech-container
   position: relative
@@ -52,55 +61,13 @@
   padding-top: $big-sp
 
 .kromtech-wrapper
-  padding-bottom: $big-sp
   overflow: hidden
-  +media-width-max(640)
-    padding-bottom: 30px
 
 .kromtech-logo
-  width: 257px
-  height: 60px
-
-.kromtech-bg-robo
-  position: absolute
-  width: 47%
-  top: -90px
-  left: -25%
-  img
+  width: 202px
+  height: 40px
+  svg
     +img
-  +media-width-max(1024)
-    width: 30%
-    left: 50%
-    transform: translateX(-50%)
-  +media-width-max(768)
-    width: 185px
-    top: -30px
-  +media-width-max(640)
-    top: 0
-
-.kromtech-robo-container
-  position: absolute
-  z-index: -1
-  left: -62%
-  top: 100px
-  img
-    +img
-  +media-width-max(1376)
-    left: -70%
-  +media-width-max(1024)
-    width: 330px
-    top: 0
-    left: -55%
-  +media-width-max(768)
-    width: 300px
-    top: 70px
-    left: -70%
-  +media-width-max(640)
-    position: relative
-    left: 50%
-    top: 0
-    margin-bottom: 40px
-    transform: translateX(-50%)
 
 .kromtech-partners-list
   display: flex
@@ -173,45 +140,29 @@
 .products-icon-container
   margin-left: auto
   margin-right: auto
-  svg
+  img
     +img
 
 .products-icon-container[data-icon=k_icon_01]
-  width: 41px
-  height: 51px
+  width: 80px
+  height: 104px
 
 .products-icon-container[data-icon=k_icon_02]
-  width: 50px
-  height: 51px
+  width: 99px
+  height: 106px
 
 .products-icon-container[data-icon=k_icon_03]
-  width: 45px
-  height: 51px
+  width: 96px
+  height: 97px
 
 .products-icon-container[data-icon=k_icon_04]
-  width: 49px
-  height: 51px
+  width: 93px
+  height: 108px
 
 .products-icon-container[data-icon=k_icon_05]
-  width: 40px
-  height: 51px
+  width: 109px
+  height: 103px
 
 .products-icon-container[data-icon=k_icon_06]
-  width: 50px
-  height: 51px
-
-.products-icon-container[data-icon=k_icon_07]
-  width: 51px
-  height: 51px
-
-.products-icon-container[data-icon=k_icon_08]
-  width: 47px
-  height: 51px
-
-.products-icon-container[data-icon=k_icon_09]
-  width: 50px
-  height: 51px
-
-.products-icon-container[data-icon=k_icon_10]
-  width: 40px
-  height: 51px
+  width: 104px
+  height: 109px

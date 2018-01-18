@@ -72,17 +72,20 @@
   margin: 0 auto
 
 .randd-wrapper
-  @extend .kromtech-wrapper
+  padding-bottom: $big-sp
+  overflow: hidden
+  +media-width-max(640)
+    padding-bottom: 30px
   
 .randd-logo
-  width: 102px
+  width: 122px
   height: 102px
   margin-top: 80px
   svg
     +img
 
 .egg-logo
-  width: 176px
+  width: 198px
   height: 78px
   margin-top: 50px
   margin-bottom: 45px
@@ -203,8 +206,8 @@
     
 .jammy-logo
   float: left
-  width: 112px
-  height: 79px
+  width: 120px
+  height: 81px
   margin-right: 5%
   img
     +img

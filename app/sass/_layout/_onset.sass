@@ -18,11 +18,16 @@
   @extend .kromtech-container
 
 .onset-wrapper
-  @extend .kromtech-wrapper
+  padding-bottom: $big-sp
+  overflow: hidden
+  +media-width-max(640)
+    padding-bottom: 30px
   
 .onset-logo
-  width: 82px
-  height: 38px
+  width: 92px
+  height: 45px
+  svg
+    +img
 
 .onset-img-container
   width: 86%
