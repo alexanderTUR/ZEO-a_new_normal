@@ -31,6 +31,34 @@ $(function() {
 		}
 	});
 
+  // init video iframes 
+  (function () {
+
+    var eggVideo = document.createElement('iframe');
+    var jammyVideo = document.createElement('iframe');
+
+    var commonAttrs = {
+      frameborder: '0',
+      webkitallowfullscreen: '',
+      mozallowfullscreen: '',
+      allowfullscreen: ''
+    };
+    
+    for (var attr in commonAttrs) {
+      if (commonAttrs.hasOwnProperty(attr)) {
+        eggVideo.setAttribute(attr, commonAttrs[attr]);
+        jammyVideo.setAttribute(attr, commonAttrs[attr]);
+      }
+    }
+
+    eggVideo.setAttribute('src', 'https://player.vimeo.com/video/251478941?title=0&byline=0&portrait=0');
+    jammyVideo.setAttribute('src', 'https://player.vimeo.com/video/251618188?title=0&byline=0&portrait=0');
+    
+    $('.__egg-video').append(eggVideo);
+    $('.__jammy-video').append(jammyVideo);
+
+  })();
+
 	// Menu functions
 	mobileMenuSwich();
 	function mobileMenuSwich() {
